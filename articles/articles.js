@@ -4,7 +4,7 @@
 const articles = [
   {
     title: "5 conseils pour mieux gerer le temps",
-    url: "articles/5-conseils-pour-mieux-gerer-le-temps.html",
+    url: "/articles/5-conseils-pour-mieux-gerer-le-temps.html",
     date: "30 mars 2025",
     category: "Développement personnel",
     icon: "📝"

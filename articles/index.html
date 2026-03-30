@@ -73,17 +73,29 @@
 <div class="container">
   <a class="back" href="/">&#8592; Accueil</a>
 
-  <div class="card-list">
-    <a class="card" href="articles/5-conseils-pour-mieux-gérer-le-temps.html">
-      <span class="icon">📝</span>
-      <h3>5 conseils pour mieux gérer le temps</h3>
-      <span class="type">Article · 30 mars 2025</span>
-    </a>
+  <div id="card-list" class="card-list"></div>
+  <div id="empty-state" class="empty" style="display:none">
+    <div class="empty-icon">📝</div>
+    <h3>Aucun article pour l'instant</h3>
+    <p>Créez un fichier <strong>.html</strong> dans le dossier <code>articles/</code> avec les balises Lumenia, puis lancez <code>node lumenia-build.js</code>.</p>
   </div>
 </div>
 
 <footer>
   &copy; 2025 <a href="/">Lumenia</a> &mdash; Savoir &amp; Inspiration
 </footer>
+<script>
+  fetch('_data.json').then(function(r){ return r.json(); }).then(function(items){
+    var list = document.getElementById('card-list');
+    var empty = document.getElementById('empty-state');
+    if (!items || items.length === 0) { empty.style.display = ''; return; }
+    items.forEach(function(it){
+      var a = document.createElement('a');
+      a.className = 'card'; a.href = it.url;
+      a.innerHTML = '<span class="icon">'+it.icon+'</span><h3>'+it.title+'</h3><span class="type">'+it.category+(it.date?' · '+it.date:'')+'</span>';
+      list.appendChild(a);
+    });
+  }).catch(function(){ document.getElementById('empty-state').style.display = ''; });
+</script>
 </body>
 </html>

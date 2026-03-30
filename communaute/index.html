@@ -100,35 +100,11 @@
 <div class="container">
   <a class="back" href="/">&#8592; Accueil</a>
 
-  <!-- =====================================================
-       COMMENT AJOUTER UN POST :
-       1. Créez un fichier .html dans ce dossier (ex: mon-post.html)
-       2. Copiez le modèle "modele-post.html" et remplissez-le
-       3. Ajoutez une carte ci-dessous en copiant le bloc <a class="card"> exemple
-
-       ⚠️ Format recommandé : HTML uniquement (.html)
-       ===================================================== -->
-
-  <!-- ── AJOUTEZ VOS POSTS ICI ── -->
-  <!-- Exemple de carte — copiez ce bloc pour chaque nouveau post :
-
-  <div class="card-list">
-    <a class="card" href="mon-post.html">
-      <span class="icon">🤝</span>
-      <h3>Titre de mon post</h3>
-      <span class="type">Communauté · Date</span>
-    </a>
-  </div>
-
-  -->
-
-  <div class="empty">
+  <div id="card-list" class="card-list"></div>
+  <div id="empty-state" class="empty" style="display:none">
     <div class="empty-icon">🤝</div>
     <h3>Aucun post pour l'instant</h3>
-    <p>Créez un fichier <strong>.html</strong> dans le dossier <code>communaute/</code>, puis ajoutez une carte ici pour le faire apparaître.</p>
-    <p style="margin-top:12px;font-size:.85rem;">
-      Utilisez le fichier <strong>modele-post.html</strong> comme point de départ.
-    </p>
+    <p>Créez un fichier <strong>.html</strong> dans le dossier <code>communaute/</code> avec les balises Lumenia, puis lancez <code>node lumenia-build.js</code>.</p>
   </div>
 
 </div>
@@ -180,6 +156,19 @@
   window.addEventListener('beforeinstallprompt', function(e) { e.preventDefault(); deferredPrompt = e; if (!localStorage.getItem('pwa-dismissed')) installBar.classList.add('show'); });
   document.getElementById('pwa-install-btn').addEventListener('click', function() { installBar.classList.remove('show'); if (deferredPrompt) { deferredPrompt.prompt(); deferredPrompt.userChoice.then(function() { deferredPrompt = null; }); } });
   document.getElementById('pwa-dismiss-btn').addEventListener('click', function() { installBar.classList.remove('show'); localStorage.setItem('pwa-dismissed', '1'); });
+</script>
+<script>
+  fetch('_data.json').then(function(r){ return r.json(); }).then(function(items){
+    var list = document.getElementById('card-list');
+    var empty = document.getElementById('empty-state');
+    if (!items || items.length === 0) { empty.style.display = ''; return; }
+    items.forEach(function(it){
+      var a = document.createElement('a');
+      a.className = 'card'; a.href = it.url;
+      a.innerHTML = '<span class="icon">'+it.icon+'</span><h3>'+it.title+'</h3><span class="type">'+it.category+(it.date?' · '+it.date:'')+'</span>';
+      list.appendChild(a);
+    });
+  }).catch(function(){ document.getElementById('empty-state').style.display = ''; });
 </script>
 </body>
 </html>
