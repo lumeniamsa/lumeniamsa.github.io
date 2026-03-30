@@ -3,8 +3,8 @@
 // Liste des articles (titre, URL, date, catégorie, icône)
 const articles = [
   {
-    title: "5 conseils pour mieux gérer le temps",
-    url: "articles/5-conseils-pour-mieux-gérer-le-temps.html",
+    title: "5 conseils pour mieux gerer le temps",
+    url: "articles/5-conseils-pour-mieux-gerer-le-temps.html",
     date: "30 mars 2025",
     category: "Développement personnel",
     icon: "📝"
