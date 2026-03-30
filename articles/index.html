@@ -85,7 +85,7 @@
   &copy; 2025 <a href="/">Lumenia</a> &mdash; Savoir &amp; Inspiration
 </footer>
 <script>
-  fetch('_data.json').then(function(r){ return r.json(); }).then(function(items){
+  fetch('_data.json?v=' + Date.now()).then(function(r){ return r.json(); }).then(function(items){
     var list = document.getElementById('card-list');
     var empty = document.getElementById('empty-state');
     if (!items || items.length === 0) { empty.style.display = ''; return; }

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'lumenia-v1';
+const CACHE_NAME = 'lumenia-v2';
 
 const PAGES_TO_CACHE = [
   '/',
@@ -19,6 +19,10 @@ const PAGES_TO_CACHE = [
   '/icons/icon-192.png',
   '/icons/icon-512.png'
 ];
+
+function isDataFile(url) {
+  return url.includes('_data.json') || url.includes('lumenia-build');
+}
 
 self.addEventListener('install', function(event) {
   event.waitUntil(
@@ -46,6 +50,12 @@ self.addEventListener('activate', function(event) {
 
 self.addEventListener('fetch', function(event) {
   if (event.request.method !== 'GET') return;
+
+  // Ne jamais mettre en cache les fichiers _data.json — toujours depuis le réseau
+  if (isDataFile(event.request.url)) {
+    event.respondWith(fetch(event.request));
+    return;
+  }
 
   event.respondWith(
     caches.match(event.request).then(function(cachedResponse) {
