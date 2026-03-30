@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vidéos - Lumenia</title>
+  <link rel="icon" type="image/png" href="https://d2xsxph8kpxj0f.cloudfront.net/310519663481944359/RUsrs92uGomFyiMKqRx9VH/lumenia-logo-NJJJRaxGtfPDR5ETsYCp6n.webp"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--blue:#0066CC;--blue-light:#eff6ff;--muted:#6b7280;--border:#e5e7eb}
+    body{font-family:'Inter',sans-serif;color:#1a1a2e;background:#f8fafc;min-height:100vh}
+    header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);padding:0 32px;height:68px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+    .logo img{width:38px;border-radius:10px}
+    .logo-text{font-family:'Poppins',sans-serif;font-weight:700;font-size:1.3rem;color:var(--blue)}
+    nav a{color:#374151;text-decoration:none;font-weight:500;font-size:.92rem;padding:8px 14px;border-radius:8px;transition:background .15s,color .15s;margin-left:4px}
+    nav a:hover{background:var(--blue-light);color:var(--blue)}
+    .hero{background:linear-gradient(135deg,#f0f7ff,#e8f4fd);padding:72px 32px;text-align:center}
+    .hero-icon{font-size:3rem;margin-bottom:16px}
+    .hero h1{font-family:'Poppins',sans-serif;font-size:2.2rem;font-weight:800;margin-bottom:12px}
+    .hero p{color:var(--muted);font-size:1.05rem;max-width:480px;margin:0 auto 28px;line-height:1.7}
+    .container{max-width:900px;margin:48px auto;padding:0 32px}
+    .card-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px}
+    .card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:24px;text-decoration:none;color:#1a1a2e;display:flex;flex-direction:column;gap:8px;transition:box-shadow .2s,border-color .2s,transform .15s}
+    .card:hover{box-shadow:0 8px 30px rgba(0,102,204,.12);border-color:var(--blue);transform:translateY(-2px)}
+    .card .icon{font-size:1.5rem}
+    .card h3{font-family:'Poppins',sans-serif;font-weight:600;font-size:1rem}
+    .card .type{font-size:.78rem;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.05em}
+    .empty{background:#fff;border:2px dashed var(--border);border-radius:16px;padding:56px 24px;text-align:center;color:var(--muted)}
+    .empty .empty-icon{font-size:3rem;margin-bottom:12px}
+    .empty h3{font-family:'Poppins',sans-serif;font-weight:600;font-size:1.1rem;color:#374151;margin-bottom:8px}
+    .empty p{font-size:.92rem;line-height:1.6;max-width:380px;margin:0 auto}
+    .back{display:inline-flex;align-items:center;gap:6px;color:var(--blue);text-decoration:none;font-weight:500;font-size:.92rem;margin-bottom:28px}
+    .back:hover{text-decoration:underline}
+    footer{background:#1a1a2e;color:#9ca3af;padding:32px;text-align:center;font-size:.85rem;margin-top:80px}
+    footer a{color:var(--blue);text-decoration:none}
+    @media(max-width:767px){header{padding:0 16px}.hero{padding:48px 20px}.container{padding:0 20px}}
+  </style>
+</head>
+<body>
+<header>
+  <a class="logo" href="/">
+    <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663481944359/RUsrs92uGomFyiMKqRx9VH/lumenia-logo-NJJJRaxGtfPDR5ETsYCp6n.webp" alt="Lumenia"/>
+    <span class="logo-text">Lumenia</span>
+  </a>
+  <nav>
+    <a href="/articles">Articles</a>
+    <a href="/formations">Formations</a>
+    <a href="/videos">Vid&#233;os</a>
+    <a href="/communaute">Communaut&#233;</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="hero-icon">🎬</div>
+  <h1>Vidéos</h1>
+  <p>Vidéos éducatives et inspirantes.</p>
+</div>
+
+<div class="container">
+  <a class="back" href="/">&#8592; Accueil</a>
+
+  <!-- =====================================================
+       AJOUTEZ VOS FICHIERS ICI (pour GitHub Pages)
+       Exemple :
+       <div class="card-list">
+         <a class="card" href="mon-article.html">
+           <span class="icon">📄</span>
+           <h3>Titre de mon article</h3>
+           <span class="type">HTML</span>
+         </a>
+       </div>
+       ===================================================== -->
+
+  <div class="empty">
+    <div class="empty-icon">🎬</div>
+    <h3>Aucun contenu pour l'instant</h3>
+    <p>Ajoutez vos fichiers .html ou .md dans ce dossier pour les voir apparaître ici.</p>
+  </div>
+
+</div>
+
+<footer>
+  &copy; 2025 <a href="/">Lumenia</a> &mdash; Savoir &amp; Inspiration
+</footer>
+</body>
+</html>
