@@ -6,6 +6,16 @@
   <meta name="description" content="Lumenia - Plateforme de partage de savoir, formations et communauté engagée."/>
   <meta name="robots" content="index, follow"/>
   <title>Lumenia - Savoir, Inspiration & Communauté</title>
+
+  <!-- PWA -->
+  <link rel="manifest" href="/manifest.json"/>
+  <meta name="theme-color" content="#0066CC"/>
+  <meta name="mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="default"/>
+  <meta name="apple-mobile-web-app-title" content="Lumenia"/>
+  <link rel="apple-touch-icon" href="/icons/icon-192.png"/>
+
   <link rel="icon" type="image/png" href="https://d2xsxph8kpxj0f.cloudfront.net/310519663481944359/RUsrs92uGomFyiMKqRx9VH/lumenia-logo-NJJJRaxGtfPDR5ETsYCp6n.webp"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
@@ -161,7 +171,7 @@
       text-align: center; font-size: 0.85rem;
     }
 
-    /* ── MOBILE NAV ── */
+    /* ── MOBILE LAYOUT ── */
     @media (max-width: 767px) {
       header { padding: 0 16px; }
       nav .btn-newsletter { display: none; }
@@ -169,58 +179,91 @@
       .hero { padding: 60px 20px 48px; }
       section { padding: 48px 20px; }
       .footer-inner { flex-direction: column; }
+      body { padding-bottom: 72px; }
     }
 
-    /* ── HAMBURGER MOBILE ── */
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 6px;
-      border-radius: 8px;
-      transition: background 0.15s;
-    }
-    .hamburger:hover { background: #f3f4f6; }
-    .hamburger span {
-      display: block; width: 24px; height: 2px;
-      background: #374151; border-radius: 2px;
-      transition: all 0.25s;
-    }
-    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-    .hamburger.open span:nth-child(2) { opacity: 0; }
-    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-    .mobile-menu {
+    /* ── PWA INSTALL BANNER ── */
+    #pwa-install-bar {
       display: none;
       position: fixed;
-      top: 68px; left: 0; right: 0;
-      background: #fff;
-      border-bottom: 1px solid #e5e7eb;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-      padding: 16px 24px 24px;
-      z-index: 99;
-      flex-direction: column;
-      gap: 4px;
+      bottom: 72px;
+      left: 12px; right: 12px;
+      background: linear-gradient(135deg, #0066CC, #004fa3);
+      color: #fff;
+      border-radius: 16px;
+      padding: 14px 18px;
+      box-shadow: 0 8px 32px rgba(0,102,204,0.35);
+      z-index: 200;
+      align-items: center;
+      gap: 12px;
+      animation: slideUp 0.4s ease;
     }
-    .mobile-menu.open { display: flex; }
-    .mobile-menu a {
-      display: block;
-      color: #374151; text-decoration: none;
-      font-weight: 500; font-size: 1.05rem;
-      padding: 12px 16px; border-radius: 10px;
-      transition: background 0.15s, color 0.15s;
+    #pwa-install-bar.show { display: flex; }
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
     }
-    .mobile-menu a:hover { background: #eff6ff; color: #0066CC; }
-    .mobile-menu .m-newsletter {
-      background: #0066CC; color: #fff !important;
-      text-align: center; margin-top: 8px; border-radius: 12px;
+    #pwa-install-bar .pwa-icon { font-size: 1.6rem; flex-shrink: 0; }
+    #pwa-install-bar .pwa-text { flex: 1; }
+    #pwa-install-bar .pwa-text strong { display: block; font-size: 0.95rem; }
+    #pwa-install-bar .pwa-text span { font-size: 0.8rem; opacity: 0.85; }
+    #pwa-install-btn {
+      background: #fff; color: #0066CC;
+      border: none; border-radius: 10px;
+      padding: 8px 16px; font-weight: 700;
+      font-size: 0.88rem; cursor: pointer;
+      flex-shrink: 0; transition: transform 0.15s;
     }
-    .mobile-menu .m-newsletter:hover { background: #004fa3 !important; }
+    #pwa-install-btn:hover { transform: scale(1.04); }
+    #pwa-dismiss-btn {
+      background: none; border: none; color: rgba(255,255,255,0.7);
+      font-size: 1.3rem; cursor: pointer; padding: 0 4px; flex-shrink: 0;
+    }
+
+    /* ── BOTTOM MOBILE NAV ── */
+    .mobile-bottom-nav {
+      display: none;
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      height: 64px;
+      background: rgba(255,255,255,0.97);
+      backdrop-filter: blur(12px);
+      border-top: 1px solid var(--border);
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.08);
+      z-index: 150;
+      align-items: stretch;
+      justify-content: space-around;
+    }
     @media (max-width: 767px) {
-      .hamburger { display: flex; }
-      nav { display: none; }
+      .mobile-bottom-nav { display: flex; }
+    }
+    .mobile-bottom-nav a {
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 4px; flex: 1;
+      color: var(--muted); text-decoration: none;
+      font-size: 0.68rem; font-weight: 600;
+      letter-spacing: 0.02em;
+      transition: color 0.18s, transform 0.15s;
+      padding: 6px 0;
+      border-radius: 12px;
+      margin: 6px 4px;
+    }
+    .mobile-bottom-nav a:hover { color: var(--blue); transform: translateY(-2px); }
+    .mobile-bottom-nav a.active { color: var(--blue); }
+    .mobile-bottom-nav a.active .nav-icon-wrap {
+      background: var(--blue-light);
+    }
+    .nav-icon-wrap {
+      width: 38px; height: 28px;
+      display: flex; align-items: center; justify-content: center;
+      border-radius: 10px;
+      transition: background 0.18s;
+    }
+    .mobile-bottom-nav a:hover .nav-icon-wrap { background: var(--blue-light); }
+    .nav-icon {
+      width: 22px; height: 22px;
+      fill: currentColor;
     }
   </style>
 </head>
@@ -244,35 +287,6 @@
     <a class="btn-newsletter" href="/contact">Newsletter</a>
   </nav>
 </header>
-  <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
-  <div class="mobile-menu" id="mobile-menu">
-    <a href="/">Accueil</a>
-    <a href="/articles">Articles</a>
-    <a href="/formations">Formations</a>
-    <a href="/videos">Vid&#233;os</a>
-    <a href="/communaute">Communaut&#233;</a>
-    <a href="/a-propos">&#192; propos</a>
-    <a href="/contact">Contact</a>
-    <a href="/contact" class="m-newsletter">Newsletter</a>
-  </div>
-  <script>
-    var btn = document.getElementById('hamburger');
-    var menu = document.getElementById('mobile-menu');
-    btn.addEventListener('click', function() {
-      var open = menu.classList.toggle('open');
-      btn.classList.toggle('open', open);
-      btn.setAttribute('aria-expanded', open);
-    });
-    document.addEventListener('click', function(e) {
-      if (!btn.contains(e.target) && !menu.contains(e.target)) {
-        menu.classList.remove('open');
-        btn.classList.remove('open');
-        btn.setAttribute('aria-expanded', false);
-      }
-    });
-  </script>
 
 <!-- HERO -->
 <section class="hero">
@@ -374,6 +388,106 @@
     &copy; 2025 Lumenia &mdash; Savoir &amp; Inspiration
   </div>
 </footer>
+
+<!-- ── BARRE DE NAVIGATION MOBILE (fixée en bas) ── -->
+<nav class="mobile-bottom-nav" aria-label="Navigation principale">
+  <a href="/" data-path="/">
+    <span class="nav-icon-wrap">
+      <svg class="nav-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+    </span>
+    Accueil
+  </a>
+  <a href="/articles/" data-path="/articles">
+    <span class="nav-icon-wrap">
+      <svg class="nav-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+    </span>
+    Articles
+  </a>
+  <a href="/formations/" data-path="/formations">
+    <span class="nav-icon-wrap">
+      <svg class="nav-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
+    </span>
+    Formations
+  </a>
+  <a href="/videos/" data-path="/videos">
+    <span class="nav-icon-wrap">
+      <svg class="nav-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/></svg>
+    </span>
+    Vidéos
+  </a>
+  <a href="/contact/" data-path="/contact">
+    <span class="nav-icon-wrap">
+      <svg class="nav-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+    </span>
+    Contact
+  </a>
+</nav>
+
+<!-- ── BOUTON INSTALLATION PWA ── -->
+<div id="pwa-install-bar" role="alert" aria-live="polite">
+  <span class="pwa-icon">📲</span>
+  <div class="pwa-text">
+    <strong>Installer Lumenia</strong>
+    <span>Accès rapide depuis votre écran d'accueil</span>
+  </div>
+  <button id="pwa-install-btn">Installer</button>
+  <button id="pwa-dismiss-btn" aria-label="Fermer">✕</button>
+</div>
+
+<script>
+  /* ── Active tab detection ── */
+  (function() {
+    var path = window.location.pathname.replace(/\/$/, '') || '/';
+    var links = document.querySelectorAll('.mobile-bottom-nav a');
+    links.forEach(function(link) {
+      var lp = link.getAttribute('data-path').replace(/\/$/, '') || '/';
+      if (path === lp || (lp !== '/' && path.startsWith(lp))) {
+        link.classList.add('active');
+      }
+    });
+  })();
+
+  /* ── Service Worker ── */
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('/sw.js').catch(function(err) {
+        console.warn('SW registration failed:', err);
+      });
+    });
+  }
+
+  /* ── PWA Install prompt ── */
+  var deferredPrompt = null;
+  var installBar = document.getElementById('pwa-install-bar');
+  var installBtn = document.getElementById('pwa-install-btn');
+  var dismissBtn = document.getElementById('pwa-dismiss-btn');
+
+  window.addEventListener('beforeinstallprompt', function(e) {
+    e.preventDefault();
+    deferredPrompt = e;
+    if (!localStorage.getItem('pwa-dismissed')) {
+      installBar.classList.add('show');
+    }
+  });
+
+  installBtn.addEventListener('click', function() {
+    installBar.classList.remove('show');
+    if (deferredPrompt) {
+      deferredPrompt.prompt();
+      deferredPrompt.userChoice.then(function() { deferredPrompt = null; });
+    }
+  });
+
+  dismissBtn.addEventListener('click', function() {
+    installBar.classList.remove('show');
+    localStorage.setItem('pwa-dismissed', '1');
+  });
+
+  window.addEventListener('appinstalled', function() {
+    installBar.classList.remove('show');
+    deferredPrompt = null;
+  });
+</script>
 
 </body>
 </html>
