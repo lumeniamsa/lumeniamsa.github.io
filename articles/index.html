@@ -41,6 +41,13 @@
       .container{padding:0 20px}
       body{padding-bottom:72px}
     }
+    .mobile-bottom-nav{display:none;position:fixed;bottom:0;left:0;right:0;height:64px;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-top:1px solid var(--border);box-shadow:0 -4px 20px rgba(0,0,0,.08);z-index:150;align-items:stretch;justify-content:space-around}
+    @media(max-width:767px){.mobile-bottom-nav{display:flex}}
+    .mobile-bottom-nav a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;flex:1;color:var(--muted);text-decoration:none;font-size:.68rem;font-weight:600;letter-spacing:.02em;transition:color .18s,transform .15s;padding:6px 0;border-radius:12px}
+    .mobile-bottom-nav a:hover,.mobile-bottom-nav a.active{color:var(--blue)}
+    .nav-icon-wrap{width:32px;height:32px;display:flex;align-items:center;justify-content:center;border-radius:10px;transition:background .18s}
+    .mobile-bottom-nav a.active .nav-icon-wrap{background:var(--blue-light)}
+    .nav-icon{width:20px;height:20px;fill:currentColor}
   </style>
 </head>
 <body>
@@ -90,5 +97,12 @@
     });
   }).catch(function(){ document.getElementById('empty-state').style.display = ''; });
 </script>
+<nav class="mobile-bottom-nav" aria-label="Navigation principale">
+  <a href="/" data-path="/"><span class="nav-icon-wrap"><svg class="nav-icon" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg></span>Accueil</a>
+  <a href="/articles/" class="active" data-path="/articles"><span class="nav-icon-wrap"><svg class="nav-icon" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg></span>Articles</a>
+  <a href="/formations/" data-path="/formations"><span class="nav-icon-wrap"><svg class="nav-icon" viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg></span>Formations</a>
+  <a href="/videos/" data-path="/videos"><span class="nav-icon-wrap"><svg class="nav-icon" viewBox="0 0 24 24"><path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/></svg></span>Vidéos</a>
+  <a href="/communaute/" data-path="/communaute"><span class="nav-icon-wrap"><svg class="nav-icon" viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg></span>Communauté</a>
+</nav>
 </body>
 </html>

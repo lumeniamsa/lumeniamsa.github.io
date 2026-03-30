@@ -39,23 +39,41 @@ function rebuild() {
     } catch (e) {
       console.error('[auto-build] Erreur :', e.message);
     }
-  }, 300);
+  }, 500);
 }
 
-WATCH_FOLDERS.forEach(folder => {
+function getContentFiles(folder) {
   const folderPath = path.join(ROOT, folder);
-  if (!fs.existsSync(folderPath)) return;
-
-  fs.watch(folderPath, (event, filename) => {
-    if (!filename) return;
-    if (!filename.endsWith('.html')) return;
-    if (SKIP_FILES.includes(filename)) return;
-    console.log(`[auto-build] Changement détecté : ${folder}/${filename}`);
-    rebuild();
+  if (!fs.existsSync(folderPath)) return {};
+  const snapshot = {};
+  fs.readdirSync(folderPath).forEach(f => {
+    if (!f.endsWith('.html') || SKIP_FILES.includes(f)) return;
+    try {
+      snapshot[f] = fs.statSync(path.join(folderPath, f)).mtimeMs;
+    } catch (_) {}
   });
+  return snapshot;
+}
 
+const snapshots = {};
+WATCH_FOLDERS.forEach(folder => {
+  snapshots[folder] = getContentFiles(folder);
   console.log(`[watch] Surveillance active : ${folder}/`);
 });
+
+setInterval(() => {
+  WATCH_FOLDERS.forEach(folder => {
+    const current = getContentFiles(folder);
+    const previous = snapshots[folder];
+    const changed = Object.keys(current).some(f => current[f] !== previous[f])
+                 || Object.keys(previous).some(f => !(f in current));
+    if (changed) {
+      console.log(`[auto-build] Changement détecté dans ${folder}/`);
+      snapshots[folder] = current;
+      rebuild();
+    }
+  });
+}, 2000);
 
 rebuild();
 
