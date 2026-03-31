@@ -1,10 +1,10 @@
 /**
- * Lumenia Build — Générateur automatique de _data.json
+ * Lumenia Build — Générateur automatique de data.json
  *
  * Utilisation : node lumenia-build.js
  *
  * Ce script scanne les dossiers de contenu, lit les métadonnées
- * de chaque fichier HTML et génère un _data.json par section.
+ * de chaque fichier HTML et génère un data.json par section.
  *
  * Convention dans chaque fichier HTML :
  *   <meta name="lumenia:title"    content="Mon titre"/>
@@ -75,13 +75,13 @@ function buildSection(section) {
     return { title, category, date, icon: icon_, url };
   });
 
-  const out = path.join(folder, '_data.json');
+  const out = path.join(folder, 'data.json');
   fs.writeFileSync(out, JSON.stringify(items, null, 2), 'utf8');
 
   if (items.length === 0) {
-    console.log(`📂 ${folder}/_data.json — aucun contenu`);
+    console.log(`📂 ${folder}/data.json — aucun contenu`);
   } else {
-    console.log(`✅ ${folder}/_data.json — ${items.length} fichier(s) :`);
+    console.log(`✅ ${folder}/data.json — ${items.length} fichier(s) :`);
     items.forEach(it => console.log(`   • ${it.title}`));
   }
 }
