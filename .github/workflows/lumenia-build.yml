@@ -1,0 +1,41 @@
+name: Lumenia Auto Build
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'articles/**/*.html'
+      - 'formations/**/*.html'
+      - 'videos/**/*.html'
+      - 'communaute/**/*.html'
+      - 'lumenia-build.js'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-index: '20'
+
+      - name: Run Lumenia Build
+        run: node lumenia-build.js
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "Lumenia Bot"
+          git config --global user.email "bot@lumenia.com"
+          git add .
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Auto-update index files [_data.json]"
+            git push
+          fi
