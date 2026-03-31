@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>5 Conseils pour Mieux Gérer le Temps - Lumenia</title>
+  <meta name="description" content="Découvrez 5 conseils pratiques pour mieux gérer votre temps, gagner en productivité et réduire le stress au quotidien."/>
+
+  <!-- Métadonnées Lumenia — lues par lumenia-build.js -->
+  <meta name="lumenia:title"    content="5 conseils pour mieux gérer le temps"/>
+  <meta name="lumenia:category" content="Développement personnel"/>
+  <meta name="lumenia:date"     content="30 mars 2026"/>
+  <meta name="lumenia:icon"     content="📝"/>
+
+  <link rel="icon" type="image/png" href="https://d2xsxph8kpxj0f.cloudfront.net/310519663481944359/RUsrs92uGomFyiMKqRx9VH/lumenia-logo-NJJJRaxGtfPDR5ETsYCp6n.webp"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --blue:#0066CC; --blue-light:#eff6ff; --blue-dark:#004fa3;
+      --text:#1e293b; --muted:#64748b; --border:#f1f5f9; --bg:#f8fafc;
+    }
+    body{font-family:'Inter',sans-serif;color:var(--text);background:#fff;min-height:100vh;line-height:1.8}
+    
+    header {
+      position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border); padding: 0 32px; height: 72px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .logo img { width: 40px; height: 40px; border-radius: 12px; }
+    .logo-text { font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 1.4rem; color: var(--blue); letter-spacing: -0.02em; }
+    nav a { color: #475569; text-decoration: none; font-weight: 600; font-size: 0.95rem; padding: 10px 16px; border-radius: 10px; transition: all 0.2s ease; margin-left: 4px; }
+    nav a:hover { background: var(--blue-light); color: var(--blue); }
+
+    .article-header{background:linear-gradient(135deg,#f0f7ff,#fff);padding:80px 32px 60px;text-align:center;border-bottom:1px solid var(--border)}
+    .article-meta{display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:24px}
+    .tag{background:var(--blue-light);color:var(--blue);font-size:.8rem;font-weight:800;padding:6px 16px;border-radius:50px;text-transform:uppercase;letter-spacing:.05em}
+    .date{color:var(--muted);font-size:.95rem;font-weight:500}
+    .article-header h1{font-family:'Poppins',sans-serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:800;line-height:1.2;max-width:850px;margin:0 auto 20px;letter-spacing:-0.02em}
+    .article-header .intro{color:var(--muted);font-size:1.2rem;max-width:700px;margin:0 auto;line-height:1.7}
+
+    .article-body{max-width:800px;margin:60px auto;padding:0 32px}
+    .article-body h2{font-family:'Poppins',sans-serif;font-size:1.8rem;font-weight:800;margin:48px 0 20px;color:#0f172a;letter-spacing:-0.01em}
+    .article-body h3{font-family:'Poppins',sans-serif;font-size:1.4rem;font-weight:700;margin:32px 0 16px;color:#0f172a}
+    .article-body p{margin-bottom:24px;font-size:1.1rem;color:#334155}
+    .article-body ul,.article-body ol{margin:0 0 24px 28px;font-size:1.1rem;color:#334155}
+    .article-body li{margin-bottom:12px}
+    .article-body strong{color:#0f172a;font-weight:700}
+    .article-body blockquote{border-left:5px solid var(--blue);padding:24px 32px;background:var(--bg);border-radius:0 24px 24px 0;margin:40px 0;color:#334155;font-style:italic;font-size:1.2rem}
+    
+    .back-link{display:inline-flex;align-items:center;gap:8px;color:var(--blue);text-decoration:none;font-weight:700;font-size:1rem;margin-bottom:48px;transition:transform 0.2s ease}
+    .back-link:hover{transform:translateX(-5px)}
+
+    footer{background:#0f172a;color:#94a3b8;padding:40px 32px;text-align:center;font-size:.9rem;margin-top:100px}
+    footer a{color:var(--blue);text-decoration:none;font-weight:600}
+
+    @media(max-width:767px){
+      header{padding:0 16px}
+      nav a{display:none}
+      .article-header{padding:60px 20px 40px}
+      .article-body{padding:0 20px;margin:40px auto}
+      body{padding-bottom:80px}
+    }
+
+    .mobile-bottom-nav { display: none; position: fixed; bottom: 20px; left: 20px; right: 20px; height: 64px; background: rgba(255,255,255,0.9); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.3); border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); z-index: 150; align-items: stretch; justify-content: space-around; }
+    @media (max-width: 767px) { .mobile-bottom-nav { display: flex; } }
+    .mobile-bottom-nav a { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; flex: 1; color: var(--muted); text-decoration: none; font-size: 0.7rem; font-weight: 700; }
+    .nav-icon-wrap { width: 42px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 12px; transition: all 0.3s ease; }
+    .nav-icon { width: 22px; height: 22px; fill: currentColor; }
+  </style>
+</head>
+<body>
+<header>
+  <a class="logo" href="/">
+    <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663481944359/RUsrs92uGomFyiMKqRx9VH/lumenia-logo-NJJJRaxGtfPDR5ETsYCp6n.webp" alt="Lumenia"/>
+    <span class="logo-text">Lumenia</span>
+  </a>
+  <nav>
+    <a href="/articles/">Articles</a>
+    <a href="/formations/">Formations</a>
+    <a href="/videos/">Vidéos</a>
+    <a href="/communaute/">Communauté</a>
+  </nav>
+</header>
+
+<div class="article-header">
+  <div class="article-meta">
+    <span class="tag">Développement personnel</span>
+    <span class="date">30 mars 2026</span>
+  </div>
+  <h1>5 Conseils Incontournables pour Mieux Gérer le Temps</h1>
+  <p class="intro">Reprenez le contrôle de vos journées, gagnez en productivité et réduisez le stress grâce à ces 5 conseils pratiques.</p>
+</div>
+
+<div class="article-body">
+  <a class="back-link" href="/articles/">&#8592; Retour aux articles</a>
+
+  <p>Gérer son temps efficacement n'est pas seulement une question d'organisation : c'est un art qui peut transformer votre productivité et améliorer votre bien-être au quotidien. Que vous soyez étudiant, entrepreneur ou simplement désireux de mieux structurer vos journées, ces 5 conseils pratiques vous aideront à reprendre le contrôle de votre temps et à accomplir davantage sans stress.</p>
+
+  <h2>1. Planifie ta journée avec précision</h2>
+  <p>La clé pour rester productif commence par une planification claire. Prenez 10 minutes chaque matin pour créer un <strong>agenda ou une liste de tâches</strong>.</p>
+  <ul>
+    <li>Définissez vos priorités pour la journée.</li>
+    <li>Notez les rendez-vous et deadlines importants.</li>
+    <li>Ajoutez un créneau pour les imprévus afin de rester flexible.</li>
+  </ul>
+  <p><strong>Exemple pratique :</strong> Si vous avez 6 tâches à accomplir, classez-les par ordre d'importance. Commencez par celle qui a le plus grand impact sur vos objectifs.</p>
+
+  <h2>2. Priorise les tâches importantes</h2>
+  <p>Toutes les tâches ne se valent pas. Il est crucial de distinguer ce qui <strong>apporte réellement de la valeur</strong> de ce qui peut attendre.</p>
+  <ul>
+    <li>Utilisez la <strong>méthode Eisenhower</strong> : séparez ce qui est urgent de ce qui est important.</li>
+    <li>Commencez votre journée par la tâche la plus critique.</li>
+  </ul>
+  <p><strong>Astuce :</strong> Les tâches importantes terminées tôt dans la journée donnent un sentiment d'accomplissement et motivent pour le reste des activités.</p>
+
+  <h2>3. Prends des pauses régulières</h2>
+  <p>Travail intense ne rime pas avec productivité continue. Des <strong>pauses régulières</strong> sont essentielles pour maintenir concentration et créativité :</p>
+  <ul>
+    <li>Pause de 5 à 10 minutes toutes les 60-90 minutes.</li>
+    <li>Levez-vous, hydratez-vous ou faites quelques étirements.</li>
+    <li>Éloignez-vous de l'écran pour oxygéner votre cerveau.</li>
+  </ul>
+  <p><strong>Exemple :</strong> La technique Pomodoro consiste à travailler 25 minutes, puis à faire une pause de 5 minutes. Après 4 cycles, prenez une pause plus longue de 15 à 20 minutes.</p>
+
+  <h2>4. Utilise des outils numériques</h2>
+  <p>Dans un monde numérique, utiliser des <strong>applications d'organisation</strong> peut faire toute la différence :</p>
+  <ul>
+    <li><strong>Trello</strong> : pour gérer vos projets visuellement.</li>
+    <li><strong>Notion</strong> : pour centraliser notes, tâches et idées.</li>
+    <li><strong>Google Calendar</strong> : pour planifier vos rendez-vous et rappels.</li>
+  </ul>
+
+  <h2>5. Suis tes progrès</h2>
+  <p>L'organisation sans suivi reste inefficace. <strong>Notez vos accomplissements</strong> et ajustez votre planning si nécessaire :</p>
+  <ul>
+    <li>Faites un bilan chaque soir : qu'avez-vous accompli ?</li>
+    <li>Identifiez ce qui a pris plus de temps que prévu et ajustez vos prochaines journées.</li>
+    <li>Célébrez vos petites victoires pour rester motivé.</li>
+  </ul>
+
+  <blockquote>Astuce bonus : commencez toujours par une tâche simple pour créer de l'élan et booster votre motivation.</blockquote>
+
+  <p>La gestion du temps n'est pas innée, elle se pratique. En appliquant ces cinq conseils, vous allez non seulement <strong>gagner en efficacité</strong>, mais aussi retrouver du calme et de la clarté dans vos journées. Commencez dès aujourd'hui et constatez la différence !</p>
+
+  <p style="margin-top: 60px; border-top: 1px solid var(--border); padding-top: 32px;">
+    <a href="/articles/" class="back-link">← Voir tous les articles</a>
+  </p>
+</div>
+
+<footer>
+  &copy; 2026 <a href="/">Lumenia</a> &mdash; Savoir &amp; Inspiration
+</footer>
+
+<nav class="mobile-bottom-nav" aria-label="Navigation principale">
+  <a href="/" data-path="/">
+    <span class="nav-icon-wrap"><svg class="nav-icon" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg></span>
+    Accueil
+  </a>
+  <a href="/articles/">
+    <span class="nav-icon-wrap"><svg class="nav-icon" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg></span>
+    Articles
+  </a>
+  <a href="/formations/">
+    <span class="nav-icon-wrap"><svg class="nav-icon" viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg></span>
+    Formations
+  </a>
+</nav>
+</body>
+</html>
