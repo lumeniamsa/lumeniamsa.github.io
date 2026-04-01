@@ -1,0 +1,83 @@
+🔥 Derniers articles (affichage dynamique)
+📚 Catégories (structure claire)
+⭐ Articles populaires
+📱 NAVIGATION RESPONSIVE (TRÈS IMPORTANT)
+👉 Desktop :
+Navbar en haut (sticky)
+Menu clair avec hover
+👉 Mobile :
+Navbar FIXE en bas (modernisée)
+Icônes + labels
+Design type app mobile
+Espacement ergonomique (thumb-friendly)🎨 CARTES ARTICLES (refonte complète)
+Transformer les articles en cartes modernes :
+Titre
+Description automatique (extrait)
+Catégorie
+Temps de lecture estimé
+Hover animation (desktop)
+Tap animation (mobile)
+Design :
+Border-radius 12-16px
+Ombre légère
+Espacement propre
+🗂️ CATÉGORIES INTELLIGENTES
+Créer une organisation claire :
+Chaque catégorie = bloc visuel
+Ajouter accordéon (toggle JS)
+Cliquer = afficher les articles liés
+📊 GRILLE RESPONSIVE
+Desktop : 3 colonnes
+Tablette : 2 colonnes
+Mobile : 1 colonne
+Utiliser CSS Grid moderne
+🎯 UX AVANCÉE
+Ajouter :
+Barre de recherche (filtrage JS instantané)
+Scroll fluide
+Bouton "retour en haut"
+Animations légères (fade / hover)
+🛠️ CORRECTIONS TECHNIQUES
+Corriger toutes les erreurs 404
+Vérifier les liens vers /articles
+Corriger chemins relatifs
+Assurer que chaque article s’ouvre sans erreur
+🤖 AUTOMATISATION (IMPORTANT)
+Générer dynamiquement les cartes via JS
+Scanner automatiquement /articles
+Extraire :
+titre ()
+catégorie (meta ou tag)
+description (premier paragraphe)
+🧱 STRUCTURE PROPRE (SANS CASSER L’EXISTANT)
+Organiser SI NÉCESSAIRE :
+/
+index.html
+/articles
+/css/style.css
+/js/script.js
+/assets
+🎨 DESIGN PROFESSIONNEL
+Palette sobre (blanc, noir, accent moderne)
+Typographie propre (Google Fonts autorisé)
+Espacement cohérent
+Interface claire et premium
+📦 EXPORT FINAL
+IMPORTANT :
+Générer un ZIP final complet
+Le ZIP doit être prêt à être upload sur GitHub
+Aucun fichier inutile
+Aucun bug
+🎯 RÉSULTAT FINAL ATTENDU :
+Site moderne et professionnel
+Navigation fluide PC + mobile
+Bottom navbar mobile optimisée
+Articles bien organisés
+Aucune erreur
+Expérience utilisateur premium
+🚫 INTERDIT :
+Ne pas recréer un nouveau site indépendant
+Ne pas supprimer le contenu existant
+Ne pas changer la logique GitHub Pages
+Commence immédiatement et fournis le ZIP final prêt à déployer.
+

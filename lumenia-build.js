@@ -33,15 +33,40 @@ const SKIP_FILES = [
 ];
 
 function extractMeta(html, name) {
+  // Match name first, then content (handles apostrophes by using closing delimiter based on opening)
   const patterns = [
-    new RegExp(`<meta[^>]+name=["']lumenia:${name}["'][^>]+content=["']([^"']+)["'][^>]*>`, 'i'),
-    new RegExp(`<meta[^>]+content=["']([^"']+)["'][^>]+name=["']lumenia:${name}["'][^>]*>`, 'i'),
+    new RegExp(`<meta[^>]+name=["']lumenia:${name}["'][^>]+content="([^"]*)"[^>]*>`, 'i'),
+    new RegExp(`<meta[^>]+name=["']lumenia:${name}["'][^>]+content='([^']*)'[^>]*>`, 'i'),
+    new RegExp(`<meta[^>]+content="([^"]*)"[^>]+name=["']lumenia:${name}["'][^>]*>`, 'i'),
+    new RegExp(`<meta[^>]+content='([^']*)'[^>]+name=["']lumenia:${name}["'][^>]*>`, 'i'),
   ];
   for (const re of patterns) {
     const m = html.match(re);
     if (m) return m[1].trim();
   }
   return null;
+}
+
+function extractDescription(html) {
+  // 1. Try lumenia:description meta
+  const lumeniaDesc = extractMeta(html, 'description');
+  if (lumeniaDesc) return lumeniaDesc;
+  // 2. Try standard meta description
+  const stdPatterns = [
+    /<meta[^>]+name=["']description["'][^>]+content="([^"]+)"[^>]*>/i,
+    /<meta[^>]+content="([^"]+)"[^>]+name=["']description["'][^>]*>/i,
+  ];
+  for (const re of stdPatterns) {
+    const m = html.match(re);
+    if (m && m[1].trim().length > 10) return m[1].trim();
+  }
+  // 3. Extract first paragraph text from article body
+  const bodyMatch = html.match(/<(?:div[^>]+class=["'][^"']*article[^"']*["']|p)[^>]*>\s*<\/?(p|div)?>?((?:<(?!\/?(script|style|h[1-6]))[^>]*>)*)?([^<]{30,})/i);
+  if (bodyMatch) {
+    const text = bodyMatch[0].replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+    return text.length > 140 ? text.slice(0, 137) + '…' : text;
+  }
+  return '';
 }
 
 function extractTitle(html) {
@@ -67,12 +92,13 @@ function buildSection(section) {
 
   const items = files.map(file => {
     const html     = fs.readFileSync(path.join(folder, file), 'utf8');
-    const title    = extractMeta(html, 'title')    || extractTitle(html) || file.replace(/\.html$/, '').replace(/-/g, ' ');
-    const category = extractMeta(html, 'category') || label;
-    const date     = extractMeta(html, 'date')     || '';
-    const icon_    = extractMeta(html, 'icon')     || icon;
-    const url      = `/${folder}/${file}`;
-    return { title, category, date, icon: icon_, url };
+    const title       = extractMeta(html, 'title')    || extractTitle(html) || file.replace(/\.html$/, '').replace(/-/g, ' ');
+    const category    = extractMeta(html, 'category') || label;
+    const date        = extractMeta(html, 'date')     || '';
+    const icon_       = extractMeta(html, 'icon')     || icon;
+    const description = extractDescription(html);
+    const url         = `/${folder}/${file}`;
+    return { title, category, date, icon: icon_, description, url };
   });
 
   const out = path.join(folder, 'data.json');

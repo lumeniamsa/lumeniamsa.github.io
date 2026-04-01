@@ -3,112 +3,100 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Formations gratuites Lumenia — guides pratiques et compétences à acquérir."/>
   <title>Formations - Lumenia</title>
   <link rel="icon" type="image/png" href="https://d2xsxph8kpxj0f.cloudfront.net/310519663481944359/RUsrs92uGomFyiMKqRx9VH/lumenia-logo-NJJJRaxGtfPDR5ETsYCp6n.webp"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
-  <style>
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    :root{--blue:#0066CC;--blue-light:#eff6ff;--muted:#6b7280;--border:#e5e7eb}
-    body{font-family:'Inter',sans-serif;color:#1a1a2e;background:#f8fafc;min-height:100vh}
-    header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);padding:0 32px;height:68px;display:flex;align-items:center;justify-content:space-between}
-    .logo{display:flex;align-items:center;gap:10px;text-decoration:none}
-    .logo img{width:38px;border-radius:10px}
-    .logo-text{font-family:'Poppins',sans-serif;font-weight:700;font-size:1.3rem;color:var(--blue)}
-    nav a{color:#374151;text-decoration:none;font-weight:500;font-size:.92rem;padding:8px 14px;border-radius:8px;transition:background .15s,color .15s;margin-left:4px}
-    nav a:hover{background:var(--blue-light);color:var(--blue)}
-    .hero{background:linear-gradient(135deg,#f0f7ff,#e8f4fd);padding:72px 32px;text-align:center}
-    .hero-icon{font-size:3rem;margin-bottom:16px}
-    .hero h1{font-family:'Poppins',sans-serif;font-size:2.2rem;font-weight:800;margin-bottom:12px}
-    .hero p{color:var(--muted);font-size:1.05rem;max-width:480px;margin:0 auto;line-height:1.7}
-    .container{max-width:900px;margin:48px auto;padding:0 32px}
-    .back{display:inline-flex;align-items:center;gap:6px;color:var(--blue);text-decoration:none;font-weight:500;font-size:.92rem;margin-bottom:12px}
-    .back:hover{text-decoration:underline}
-    .listing-count{color:var(--muted);font-size:.9rem;margin-bottom:24px}
-    .category-title{font-size:1.1rem;font-weight:700;color:var(--blue);margin:36px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--border);text-transform:capitalize}
-    .listing-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px;margin-top:8px}
-    .listing-card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:24px;text-decoration:none;color:#1a1a2e;display:flex;flex-direction:column;gap:8px;transition:box-shadow .2s,border-color .2s,transform .15s}
-    .listing-card:hover{box-shadow:0 8px 30px rgba(0,102,204,.12);border-color:var(--blue);transform:translateY(-2px)}
-    .listing-card .icon{font-size:1.5rem}
-    .listing-card .name{font-family:'Poppins',sans-serif;font-weight:600;font-size:1rem}
-    .listing-card .type{font-size:.78rem;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.05em}
-    .empty{background:#fff;border:2px dashed var(--border);border-radius:16px;padding:56px 24px;text-align:center;color:var(--muted)}
-    footer{background:#1a1a2e;color:#9ca3af;padding:32px;text-align:center;font-size:.85rem;margin-top:80px}
-    footer a{color:var(--blue);text-decoration:none}
-    .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;border-radius:8px;transition:background .15s}
-    .hamburger:hover{background:#f3f4f6}
-    .hamburger span{display:block;width:24px;height:2px;background:#374151;border-radius:2px;transition:all .25s}
-    .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
-    .hamburger.open span:nth-child(2){opacity:0}
-    .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-    .mobile-menu{display:none;position:fixed;top:68px;left:0;right:0;background:#fff;border-bottom:1px solid #e5e7eb;box-shadow:0 8px 24px rgba(0,0,0,.08);padding:16px 24px 24px;z-index:99;flex-direction:column;gap:4px}
-    .mobile-menu.open{display:flex}
-    .mobile-menu a{display:block;color:#374151;text-decoration:none;font-weight:500;font-size:1.05rem;padding:12px 16px;border-radius:10px;transition:background .15s,color .15s}
-    .mobile-menu a:hover{background:#eff6ff;color:#0066CC}
-    .mobile-menu .m-newsletter{background:#0066CC;color:#fff!important;text-align:center;margin-top:8px;border-radius:12px}
-    .mobile-menu .m-newsletter:hover{background:#004fa3!important}
-    @media(max-width:767px){header{padding:0 16px}.hero{padding:48px 20px}.container{padding:0 20px}.hamburger{display:flex}nav{display:none}}
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/css/lumenia.css"/>
 </head>
 <body>
-<header>
+
+<header class="site-header">
   <a class="logo" href="/">
     <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663481944359/RUsrs92uGomFyiMKqRx9VH/lumenia-logo-NJJJRaxGtfPDR5ETsYCp6n.webp" alt="Lumenia"/>
     <span class="logo-text">Lumenia</span>
   </a>
-  <nav>
+  <nav class="site-nav">
     <a href="/articles">Articles</a>
     <a href="/formations">Formations</a>
-    <a href="/videos">Vid&#233;os</a>
-    <a href="/communaute">Communaut&#233;</a>
+    <a href="/videos">Vidéos</a>
+    <a href="/communaute">Communauté</a>
+    <a href="/a-propos">À propos</a>
+    <a href="/contact">Contact</a>
   </nav>
   <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
 </header>
+
 <div class="mobile-menu" id="mobile-menu">
   <a href="/">Accueil</a>
   <a href="/articles">Articles</a>
   <a href="/formations">Formations</a>
-  <a href="/videos">Vid&#233;os</a>
-  <a href="/communaute">Communaut&#233;</a>
-  <a href="/a-propos">&#192; propos</a>
+  <a href="/videos">Vidéos</a>
+  <a href="/communaute">Communauté</a>
+  <a href="/a-propos">À propos</a>
   <a href="/contact">Contact</a>
-  <a href="/contact" class="m-newsletter">Newsletter</a>
+  <a href="/contact" class="m-cta">Newsletter</a>
 </div>
 
-<div class="hero">
+<div class="sub-hero">
   <div class="hero-icon">🎓</div>
   <h1>Formations</h1>
-  <p>Formations pratiques et guides complets.</p>
+  <p>Guides pratiques et formations accessibles pour acquérir de nouvelles compétences.</p>
 </div>
 
-<div class="container">
-  <a class="back" href="/">&#8592; Accueil</a>
-  <p class="listing-count" id="listing-count">Chargement&hellip;</p>
-  <div id="listing-container"></div>
+<div class="section">
+  <div class="container-narrow">
+    <a class="back-link" href="/">← Accueil</a>
+    <div class="listing-toolbar">
+      <span class="listing-count" id="listing-count">Chargement…</span>
+      <div class="search-bar">
+        <span class="search-icon">🔍</span>
+        <input type="search" id="search-input" placeholder="Rechercher une formation…" autocomplete="off"/>
+      </div>
+    </div>
+    <div id="filter-bar" class="filter-bar"></div>
+    <div id="listing-container"></div>
+  </div>
 </div>
 
-<footer>
-  &copy; 2025 <a href="/">Lumenia</a> &mdash; Savoir &amp; Inspiration
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a class="logo" href="/"><img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663481944359/RUsrs92uGomFyiMKqRx9VH/lumenia-logo-NJJJRaxGtfPDR5ETsYCp6n.webp" alt="Lumenia"/><span class="logo-text">Lumenia</span></a>
+      <p>Votre source quotidienne de lumière, de savoir et d'inspiration.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Contenu</h4>
+      <a href="/articles">Articles</a>
+      <a href="/formations">Formations</a>
+      <a href="/videos">Vidéos</a>
+      <a href="/communaute">Communauté</a>
+    </div>
+  </div>
+  <div class="footer-bottom">&copy; 2026 Lumenia &mdash; Savoir &amp; Inspiration</div>
 </footer>
 
+<nav class="bottom-nav" aria-label="Navigation principale">
+  <a href="/"><span class="bn-icon"><svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg></span>Accueil</a>
+  <a href="/articles"><span class="bn-icon"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg></span>Articles</a>
+  <a href="/formations"><span class="bn-icon"><svg viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg></span>Formations</a>
+  <a href="/videos"><span class="bn-icon"><svg viewBox="0 0 24 24"><path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/></svg></span>Vidéos</a>
+  <a href="/communaute"><span class="bn-icon"><svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg></span>Communauté</a>
+</nav>
+
+<button class="back-to-top" id="back-to-top" aria-label="Retour en haut">
+  <svg viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>
+</button>
+
+<script src="/js/lumenia.js"></script>
 <script>
-  var btn = document.getElementById('hamburger');
-  var menu = document.getElementById('mobile-menu');
-  btn.addEventListener('click', function() {
-    var open = menu.classList.toggle('open');
-    btn.classList.toggle('open', open);
-    btn.setAttribute('aria-expanded', open);
-  });
-  document.addEventListener('click', function(e) {
-    if (!btn.contains(e.target) && !menu.contains(e.target)) {
-      menu.classList.remove('open');
-      btn.classList.remove('open');
-      btn.setAttribute('aria-expanded', false);
-    }
+  loadListing({
+    dataUrl: '/formations/data.json',
+    emptyLabel: 'Aucune formation disponible pour l\'instant. Revenez bientôt !'
   });
 </script>
-<script src="/listing.js"></script>
 </body>
 </html>

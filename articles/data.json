@@ -1,9 +1,10 @@
 [
   {
-    "title": "Réapprendre à briller sans s’épuiser",
-    "category": "Article",
-    "date": "",
-    "icon": "📝",
+    "title": "Réapprendre à briller sans s'épuiser",
+    "category": "Mindset",
+    "date": "1 avril 2026",
+    "icon": "✨",
+    "description": "Réapprendre à briller sans s'épuiser : un article inspirant sur la lumière intérieure et la croissance personnelle.",
     "url": "/articles/reapprendre-a-briller.html"
   },
   {
@@ -11,6 +12,7 @@
     "category": "Développement personnel",
     "date": "30 mars 2026",
     "icon": "📝",
+    "description": "Découvrez 5 conseils pratiques pour mieux gérer votre temps, gagner en productivité et réduire le stress au quotidien.",
     "url": "/articles/5-conseils-pour-mieux-gerer-le-temps.html"
   }
 ]
