@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40">
+  <rect width="40" height="40" rx="10" fill="#0066CC"/>
+  <circle cx="20" cy="15" r="5" fill="#ffffff"/>
+  <line x1="20" y1="7" x2="20" y2="5" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+  <line x1="20" y1="23" x2="20" y2="25" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+  <line x1="12" y1="15" x2="10" y2="15" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+  <line x1="28" y1="15" x2="30" y2="15" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+  <line x1="14.34" y1="9.34" x2="12.93" y2="7.93" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+  <line x1="25.66" y1="20.66" x2="27.07" y2="22.07" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+  <line x1="25.66" y1="9.34" x2="27.07" y2="7.93" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+  <line x1="14.34" y1="20.66" x2="12.93" y2="22.07" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+  <rect x="13" y="28" width="14" height="2.5" rx="1.25" fill="#ffffff" opacity="0.9"/>
+  <rect x="15" y="32" width="10" height="2.5" rx="1.25" fill="#ffffff" opacity="0.7"/>
+</svg>

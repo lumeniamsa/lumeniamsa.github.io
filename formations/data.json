@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Maîtriser la gestion du temps",
+    "category": "Productivité",
+    "date": "22 mars 2026",
+    "icon": "⏱️",
+    "description": "Apprenez à maîtriser votre temps avec les meilleures méthodes : Pomodoro, Time Blocking, GTD. Reprenez le contrôle de votre agenda.",
+    "url": "/formations/maitriser-la-gestion-du-temps.html"
+  },
+  {
+    "title": "Introduction au développement personnel",
+    "category": "Bien-être & Mindset",
+    "date": "15 mars 2026",
+    "icon": "🌱",
+    "description": "Découvrez les fondements du développement personnel et comment transformer votre quotidien grâce à des habitudes simples et puissantes.",
+    "url": "/formations/introduction-au-developpement-personnel.html"
+  }
+]
