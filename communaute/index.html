@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Communauté Lumenia — échanges, partages et discussions entre passionnés."/>
+  <title>Communauté - Lumenia</title>
+  <link rel="icon" type="image/svg+xml" href="/attached_assets/lumenia-icon.svg"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/css/lumenia.css"/>
+</head>
+<body>
+<header class="site-header">
+  <a class="logo" href="/"><img src="/attached_assets/lumenia-icon.svg" alt=""/><span class="logo-text">Lumenia</span></a>
+  <nav class="site-nav">
+    <a href="/articles">Articles</a>
+    <a href="/formations">Formations</a>
+    <a href="/videos">Vidéos</a>
+    <a href="/communaute" class="active">Communauté</a>
+    <a href="/a-propos">À propos</a>
+    <a href="/contact">Contact</a>
+  </nav>
+  <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</header>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="/">Accueil</a><a href="/articles">Articles</a><a href="/formations">Formations</a>
+  <a href="/videos">Vidéos</a><a href="/communaute">Communauté</a>
+  <a href="/a-propos">À propos</a><a href="/contact">Contact</a>
+  <a href="/contact" class="m-cta">Newsletter</a>
+</div>
+<div class="sub-hero">
+  <div class="hero-icon">🤝</div>
+  <h1>Communauté</h1>
+  <p>Partagez vos réflexions, posez des questions et connectez-vous avec d'autres passionnés de savoir.</p>
+</div>
+<div class="section">
+  <div class="container-narrow">
+    <a class="back-link" href="/">← Accueil</a>
+    <div class="new-post-form fade-in">
+      <h3>✍️ Publier dans la communauté</h3>
+      <form id="new-post-form" novalidate>
+        <div class="form-row" style="margin-bottom:14px">
+          <label for="post-name" style="font-size:.85rem;font-weight:600;color:var(--muted);margin-bottom:6px;display:block">Votre prénom *</label>
+          <input type="text" id="post-name" placeholder="Ex : Marie" maxlength="60" required style="width:100%;border:1.5px solid var(--border);border-radius:10px;padding:11px 14px;font-family:'Inter',sans-serif;font-size:.93rem;color:var(--text);background:var(--bg);outline:none;transition:border-color .2s,box-shadow .2s"/>
+        </div>
+        <div class="form-row" style="margin-bottom:14px">
+          <label for="post-title" style="font-size:.85rem;font-weight:600;color:var(--muted);margin-bottom:6px;display:block">Titre de votre message *</label>
+          <input type="text" id="post-title" placeholder="Ex : Question sur la méditation" maxlength="120" required style="width:100%;border:1.5px solid var(--border);border-radius:10px;padding:11px 14px;font-family:'Inter',sans-serif;font-size:.93rem;color:var(--text);background:var(--bg);outline:none;transition:border-color .2s,box-shadow .2s"/>
+        </div>
+        <div class="form-row" style="margin-bottom:14px">
+          <label for="post-category" style="font-size:.85rem;font-weight:600;color:var(--muted);margin-bottom:6px;display:block">Catégorie</label>
+          <select id="post-category" style="width:100%;border:1.5px solid var(--border);border-radius:10px;padding:11px 14px;font-family:'Inter',sans-serif;font-size:.93rem;color:var(--text);background:var(--bg);outline:none;cursor:pointer;appearance:none;transition:border-color .2s">
+            <option value="Général">Général</option>
+            <option value="Question">Question</option>
+            <option value="Partage">Partage</option>
+            <option value="Inspiration">Inspiration</option>
+            <option value="Mindset">Mindset</option>
+            <option value="Développement personnel">Développement personnel</option>
+          </select>
+        </div>
+        <div class="form-row" style="margin-bottom:18px">
+          <label for="post-body" style="font-size:.85rem;font-weight:600;color:var(--muted);margin-bottom:6px;display:block">Votre message *</label>
+          <textarea id="post-body" rows="5" placeholder="Partagez votre réflexion, votre question ou votre expérience…" maxlength="1200" required style="width:100%;border:1.5px solid var(--border);border-radius:10px;padding:11px 14px;font-family:'Inter',sans-serif;font-size:.93rem;color:var(--text);background:var(--bg);outline:none;resize:vertical;transition:border-color .2s,box-shadow .2s;min-height:120px"></textarea>
+        </div>
+        <div id="post-error" style="display:none;color:#e85d7a;font-size:.88rem;margin-bottom:12px;padding:10px 14px;background:#fff0f4;border-radius:8px;border:1px solid #fecdd3"></div>
+        <button type="submit" class="btn-comment-submit" style="font-size:1rem;padding:12px 28px">🚀 Publier</button>
+      </form>
+    </div>
+    <div class="listing-toolbar">
+      <span class="listing-count" id="listing-count">Chargement…</span>
+      <div class="search-bar">
+        <span class="search-icon">🔍</span>
+        <input type="search" id="search-input" placeholder="Rechercher dans la communauté…" autocomplete="off"/>
+      </div>
+    </div>
+    <div id="filter-bar" class="filter-bar"></div>
+    <div id="community-container" class="community-grid"></div>
+  </div>
+</div>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a class="logo" href="/"><img src="/attached_assets/lumenia-icon.svg" alt=""/><span class="logo-text">Lumenia</span></a>
+      <p>Votre source quotidienne de lumière, de savoir et d'inspiration.</p>
+    </div>
+    <div class="footer-links"><h4>Contenu</h4><a href="/articles">Articles</a><a href="/formations">Formations</a><a href="/videos">Vidéos</a><a href="/communaute">Communauté</a></div>
+    <div class="footer-links"><h4>Lumenia</h4><a href="/a-propos">À propos</a><a href="/contact">Contact</a></div>
+  </div>
+  <div class="footer-bottom">&copy; 2026 Lumenia &mdash; Savoir &amp; Inspiration</div>
+</footer>
+<nav class="bottom-nav" aria-label="Navigation principale">
+  <a href="/"><span class="bn-icon"><svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg></span>Accueil</a>
+  <a href="/articles"><span class="bn-icon"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg></span>Articles</a>
+  <a href="/formations"><span class="bn-icon"><svg viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg></span>Formations</a>
+  <a href="/videos"><span class="bn-icon"><svg viewBox="0 0 24 24"><path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/></svg></span>Vidéos</a>
+  <a href="/communaute"><span class="bn-icon"><svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg></span>Communauté</a>
+</nav>
+<button class="back-to-top" id="back-to-top" aria-label="Retour en haut"><svg viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg></button>
+<script src="/js/lumenia.js"></script>
+<script>
+(function(){
+  var SK='lumenia-community-posts',OK='lumenia-my-posts';
+  function gp(){try{return JSON.parse(localStorage.getItem(SK)||'[]');}catch(e){return[];}}
+  function sp(p){localStorage.setItem(SK,JSON.stringify(p));}
+  function gi(){try{return JSON.parse(localStorage.getItem(OK)||'[]');}catch(e){return[];}}
+  function ai(id){var ids=gi();ids.push(id);localStorage.setItem(OK,JSON.stringify(ids));}
+  function ri(id){localStorage.setItem(OK,JSON.stringify(gi().filter(function(i){return i!==id;})));}
+  function safe(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+  function ini(n){return(n||'?').trim().split(/\s+/).map(function(w){return w[0].toUpperCase();}).slice(0,2).join('');}
+  function fd(ts){var d=new Date(ts),m=['jan.','fév.','mars','avr.','mai','juin','juil.','août','sept.','oct.','nov.','déc.'];return d.getDate()+' '+m[d.getMonth()]+' '+d.getFullYear();}
+  var posts=[],cat='Tous',q='';
+  function render(){
+    var c=document.getElementById('community-container'),cnt=document.getElementById('listing-count'),myIds=gi();
+    var f=posts.filter(function(p){return(cat==='Tous'||p.category===cat)&&(!q||(p.title||'').toLowerCase().includes(q)||(p.body||'').toLowerCase().includes(q)||(p.author||'').toLowerCase().includes(q));});
+    if(cnt)cnt.textContent=f.length+' message'+(f.length!==1?'s':'');
+    if(!f.length){c.innerHTML='<div class="empty-state"><div class="empty-icon">💬</div><p>'+(q||cat!=='Tous'?'Aucun résultat.':'Soyez le premier à publier dans la communauté !')+'</p></div>';return;}
+    c.innerHTML=f.map(function(p){var cd=myIds.indexOf(p.id)!==-1;return'<div class="post-card fade-in"><div class="post-header"><div class="post-avatar">'+safe(ini(p.author))+'</div><div class="post-meta"><div class="post-author">'+safe(p.author)+'</div><div class="post-date">'+fd(p.ts)+'</div></div>'+(cd?'<button class="post-delete" data-id="'+safe(p.id)+'" title="Supprimer">🗑</button>':'')+'</div><div class="post-title">'+safe(p.title)+'</div><div class="post-body">'+safe(p.body)+'</div><div class="post-tags"><span class="post-tag">'+safe(p.category||'Général')+'</span></div></div>';}).join('');
+    c.querySelectorAll('.post-delete').forEach(function(btn){btn.addEventListener('click',function(){if(!confirm('Supprimer ce message ?'))return;var id=btn.dataset.id;posts=posts.filter(function(p){return p.id!==id;});sp(posts);ri(id);chips();render();});});
+  }
+  function chips(){
+    var fb=document.getElementById('filter-bar');if(!fb)return;
+    var cats=['Tous'];posts.forEach(function(p){if(p.category&&cats.indexOf(p.category)===-1)cats.push(p.category);});
+    fb.innerHTML=cats.map(function(c){return'<button class="filter-chip'+(c===cat?' active':'')+'" data-cat="'+safe(c)+'">'+safe(c)+'</button>';}).join('');
+    fb.querySelectorAll('.filter-chip').forEach(function(chip){chip.addEventListener('click',function(){cat=chip.dataset.cat;fb.querySelectorAll('.filter-chip').forEach(function(c){c.classList.remove('active');});chip.classList.add('active');render();});});
+  }
+  function foc(el){if(!el)return;el.addEventListener('focus',function(){el.style.borderColor='var(--blue)';el.style.boxShadow='0 0 0 3px rgba(0,102,204,.1)';});el.addEventListener('blur',function(){el.style.borderColor='var(--border)';el.style.boxShadow='none';});}
+  function init(){
+    posts=gp();chips();render();
+    var si=document.getElementById('search-input');
+    if(si)si.addEventListener('input',function(){q=si.value.trim().toLowerCase();render();});
+    var n=document.getElementById('post-name'),t=document.getElementById('post-title'),cat2=document.getElementById('post-category'),b=document.getElementById('post-body'),err=document.getElementById('post-error');
+    [n,t,cat2,b].forEach(foc);
+    var form=document.getElementById('new-post-form');
+    if(!form)return;
+    form.addEventListener('submit',function(e){
+      e.preventDefault();err.style.display='none';
+      var name=(n.value||'').trim(),title=(t.value||'').trim(),body=(b.value||'').trim(),category=cat2?cat2.value:'Général';
+      if(!name){err.textContent="Merci d'indiquer votre prénom.";err.style.display='block';n.focus();return;}
+      if(!title){err.textContent="Merci d'ajouter un titre.";err.style.display='block';t.focus();return;}
+      if(!body){err.textContent="Le message ne peut pas être vide.";err.style.display='block';b.focus();return;}
+      var id=Date.now().toString(36)+Math.random().toString(36).slice(2,7);
+      posts.unshift({id:id,author:name,title:title,body:body,category:category,ts:Date.now()});
+      sp(posts);ai(id);n.value='';t.value='';b.value='';cat='Tous';chips();render();
+      document.getElementById('community-container').scrollIntoView({behavior:'smooth',block:'start'});
+    });
+  }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init);}else{init();}
+})();
+</script>
+</body>
+</html>
