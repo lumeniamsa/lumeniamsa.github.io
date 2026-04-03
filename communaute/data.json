@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Mon défi lecture : 12 livres en 12 mois — bilan à mi-parcours",
+    "category": "Développement personnel",
+    "date": "2 avril 2026",
+    "icon": "📚",
+    "description": "Retour d'expérience sur mon défi lecture annuel : ce que j'ai appris, ce qui m'a surpris.",
+    "url": "/communaute/retour-experience-lecture.html"
+  },
+  {
+    "title": "Comment vous gérez-vous le stress au travail ?",
+    "category": "Bien-être",
+    "date": "28 mars 2026",
+    "icon": "🧘",
+    "description": "Une question ouverte à la communauté : quelles sont vos stratégies anti-stress au quotidien ?",
+    "url": "/communaute/question-gestion-stress.html"
+  },
+  {
+    "title": "Mes 5 ressources préférées pour booster ma productivité",
+    "category": "Productivité",
+    "date": "1 avril 2026",
+    "icon": "⚡",
+    "description": "Je partage avec vous les outils et ressources qui ont transformé ma façon de travailler.",
+    "url": "/communaute/partage-ressources-productivite.html"
+  }
+]
