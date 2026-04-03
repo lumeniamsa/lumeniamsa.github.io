@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Communauté Lumenia — échanges, partages et discussions entre passionnés."/>
+  <title>Communauté - Lumenia</title>
+  <link rel="icon" type="image/svg+xml" href="/attached_assets/lumenia-icon.svg"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/css/lumenia.css"/>
+  <style>
+    /* ── POST CARD ANIMATIONS ── */
+    @keyframes postSlideIn {
+      from { opacity: 0; transform: translateY(14px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .post-card { animation: postSlideIn .35s ease both; }
+
+    /* ── REPLY THREAD ── */
+    .replies-block {
+      margin-top: 14px;
+      border-top: 1px solid var(--border);
+      padding-top: 12px;
+    }
+    .replies-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 10px; }
+    .reply-item {
+      display: flex; gap: 10px; align-items: flex-start;
+      padding: 10px 14px;
+      background: var(--bg);
+      border-radius: 10px;
+    }
+    .reply-avatar {
+      width: 30px; height: 30px; border-radius: 50%;
+      background: var(--blue-light); color: var(--blue);
+      font-weight: 800; font-size: .75rem;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .reply-content { flex: 1; min-width: 0; }
+    .reply-author { font-weight: 700; font-size: .82rem; color: var(--text); }
+    .reply-date { font-size: .72rem; color: var(--muted); margin-bottom: 3px; }
+    .reply-text { font-size: .88rem; color: var(--muted); line-height: 1.6; white-space: pre-wrap; word-break: break-word; }
+    .reply-delete { background: none; border: none; cursor: pointer; color: #cbd5e1; font-size: .75rem; padding: 2px 6px; border-radius: 4px; transition: color .15s, background .15s; flex-shrink: 0; margin-top: 2px; }
+    .reply-delete:hover { color: #e85d7a; background: #fff0f4; }
+
+    /* ── REPLY FORM ── */
+    .reply-form-wrap { display: none; margin-top: 10px; }
+    .reply-form-wrap.open { display: block; }
+    .reply-form { display: flex; gap: 8px; flex-wrap: wrap; }
+    .reply-form input[type=text] {
+      flex: 1; min-width: 120px;
+      border: 1.5px solid var(--border); border-radius: 8px;
+      padding: 8px 12px; font-size: .88rem; font-family: 'Inter', sans-serif;
+      color: var(--text); background: var(--bg); outline: none;
+      transition: border-color .2s;
+    }
+    .reply-form input[type=text]:focus { border-color: var(--blue); }
+    .reply-form textarea {
+      width: 100%;
+      border: 1.5px solid var(--border); border-radius: 8px;
+      padding: 8px 12px; font-size: .88rem; font-family: 'Inter', sans-serif;
+      color: var(--text); background: var(--bg); outline: none;
+      resize: vertical; min-height: 70px;
+      transition: border-color .2s;
+    }
+    .reply-form textarea:focus { border-color: var(--blue); }
+    .reply-submit {
+      background: var(--blue); color: #fff; border: none;
+      border-radius: 8px; padding: 8px 18px;
+      font-size: .88rem; font-weight: 700; font-family: 'Inter', sans-serif;
+      cursor: pointer; transition: background .2s;
+    }
+    .reply-submit:hover { background: var(--blue-dark); }
+
+    /* ── POST ACTIONS BAR ── */
+    .post-actions {
+      display: flex; gap: 8px; flex-wrap: wrap;
+      margin-top: 14px; padding-top: 12px;
+      border-top: 1px solid var(--border);
+    }
+    .action-btn {
+      display: flex; align-items: center; gap: 5px;
+      background: var(--bg);
+      border: 1.5px solid var(--border);
+      border-radius: 20px;
+      padding: 6px 14px;
+      font-size: .83rem; font-weight: 600; font-family: 'Inter', sans-serif;
+      color: var(--muted); cursor: pointer;
+      transition: all .18s;
+    }
+    .action-btn:hover { border-color: var(--blue); color: var(--blue); background: var(--blue-light); }
+    .action-btn.liked { border-color: #e85d7a; color: #e85d7a; background: #fff0f4; }
+    .action-btn.liked:hover { border-color: #c9415f; color: #c9415f; }
+    .action-btn .count { font-weight: 700; min-width: 16px; text-align: center; }
+
+    /* ── NEW POST FORM ── */
+    .new-post-form .form-field {
+      margin-bottom: 14px;
+    }
+    .new-post-form .form-field label {
+      display: block; font-size: .85rem; font-weight: 600;
+      color: var(--muted); margin-bottom: 6px;
+    }
+    .new-post-form .form-field input,
+    .new-post-form .form-field select,
+    .new-post-form .form-field textarea {
+      width: 100%;
+      border: 1.5px solid var(--border); border-radius: 10px;
+      padding: 11px 14px;
+      font-family: 'Inter', sans-serif; font-size: .93rem;
+      color: var(--text); background: var(--bg); outline: none;
+      transition: border-color .2s, box-shadow .2s;
+    }
+    .new-post-form .form-field input:focus,
+    .new-post-form .form-field select:focus,
+    .new-post-form .form-field textarea:focus {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px rgba(0,102,204,.1);
+    }
+    .new-post-form .form-field textarea { min-height: 110px; resize: vertical; }
+    .new-post-form .form-field select { cursor: pointer; appearance: none; }
+
+    /* Dark mode */
+    [data-theme="dark"] .reply-item { background: #111827; }
+    [data-theme="dark"] .reply-form input,
+    [data-theme="dark"] .reply-form textarea { background: #111827; border-color: var(--border); color: var(--text); }
+    [data-theme="dark"] .action-btn { background: #111827; border-color: var(--border); }
+    [data-theme="dark"] .action-btn:hover { background: #1a2d4a; }
+    [data-theme="dark"] .action-btn.liked { background: #2d1a20; border-color: #e85d7a; color: #f87a96; }
+    [data-theme="dark"] .new-post-form .form-field input,
+    [data-theme="dark"] .new-post-form .form-field select,
+    [data-theme="dark"] .new-post-form .form-field textarea { background: #111827; border-color: var(--border); color: var(--text); }
+    [data-theme="dark"] .reply-author { color: var(--text); }
+    [data-theme="dark"] .reply-delete:hover { background: #2d1a20; }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <a class="logo" href="/"><img src="/attached_assets/lumenia-icon.svg" alt=""/><span class="logo-text">Lumenia</span></a>
+  <nav class="site-nav">
+    <a href="/articles">Articles</a>
+    <a href="/formations">Formations</a>
+    <a href="/videos">Vidéos</a>
+    <a href="/communaute" class="active">Communauté</a>
+    <a href="/a-propos">À propos</a>
+    <a href="/contact">Contact</a>
+  </nav>
+  <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</header>
+
+<div class="mobile-menu" id="mobile-menu">
+  <a href="/">Accueil</a><a href="/articles">Articles</a><a href="/formations">Formations</a>
+  <a href="/videos">Vidéos</a><a href="/communaute">Communauté</a>
+  <a href="/a-propos">À propos</a><a href="/contact">Contact</a>
+  <a href="/contact" class="m-cta">Newsletter</a>
+</div>
+
+<div class="sub-hero">
+  <div class="hero-icon">🤝</div>
+  <h1>Communauté</h1>
+  <p>Partagez vos réflexions, posez vos questions et échangez avec d'autres passionnés.</p>
+</div>
+
+<div class="section">
+  <div class="container-narrow">
+    <a class="back-link" href="/">← Accueil</a>
+
+    <!-- ══ FORMULAIRE NOUVEAU POST ══ -->
+    <div class="new-post-form" style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);padding:28px 24px;margin-bottom:32px;">
+      <h3 style="font-family:'Poppins',sans-serif;font-weight:700;font-size:1.05rem;margin-bottom:18px;color:var(--text)">✍️ Publier dans la communauté</h3>
+      <form id="new-post-form" novalidate>
+        <div class="form-field">
+          <label for="post-name">Votre prénom *</label>
+          <input type="text" id="post-name" placeholder="Ex : Marie" maxlength="60" required/>
+        </div>
+        <div class="form-field">
+          <label for="post-title">Titre de votre message *</label>
+          <input type="text" id="post-title" placeholder="Ex : Question sur la méditation" maxlength="120" required/>
+        </div>
+        <div class="form-field">
+          <label for="post-category">Catégorie</label>
+          <select id="post-category">
+            <option value="Général">Général</option>
+            <option value="Question">Question</option>
+            <option value="Partage">Partage</option>
+            <option value="Inspiration">Inspiration</option>
+            <option value="Mindset">Mindset</option>
+            <option value="Développement personnel">Développement personnel</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="post-body">Votre message *</label>
+          <textarea id="post-body" rows="5" placeholder="Partagez votre réflexion, question ou expérience…" maxlength="1200" required></textarea>
+        </div>
+        <div id="post-error" style="display:none;color:#e85d7a;font-size:.88rem;margin-bottom:12px;padding:10px 14px;background:#fff0f4;border-radius:8px;border:1px solid #fecdd3"></div>
+        <button type="submit" class="btn-comment-submit" style="font-size:1rem;padding:12px 28px">🚀 Publier</button>
+      </form>
+    </div>
+
+    <!-- ══ TOOLBAR ══ -->
+    <div class="listing-toolbar">
+      <span class="listing-count" id="listing-count">0 message</span>
+      <div class="search-bar">
+        <span class="search-icon">🔍</span>
+        <input type="search" id="search-input" placeholder="Rechercher dans la communauté…" autocomplete="off"/>
+      </div>
+    </div>
+    <div id="filter-bar" class="filter-bar"></div>
+
+    <!-- ══ POSTS ══ -->
+    <div id="community-container" class="community-grid"></div>
+
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a class="logo" href="/"><img src="/attached_assets/lumenia-icon.svg" alt=""/><span class="logo-text">Lumenia</span></a>
+      <p>Votre source quotidienne de lumière, de savoir et d'inspiration.</p>
+    </div>
+    <div class="footer-links"><h4>Contenu</h4><a href="/articles">Articles</a><a href="/formations">Formations</a><a href="/videos">Vidéos</a><a href="/communaute">Communauté</a></div>
+    <div class="footer-links"><h4>Lumenia</h4><a href="/a-propos">À propos</a><a href="/contact">Contact</a></div>
+  </div>
+  <div class="footer-bottom">&copy; 2026 Lumenia &mdash; Savoir &amp; Inspiration</div>
+</footer>
+
+<nav class="bottom-nav" aria-label="Navigation principale">
+  <a href="/"><span class="bn-icon"><svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg></span>Accueil</a>
+  <a href="/articles"><span class="bn-icon"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg></span>Articles</a>
+  <a href="/formations"><span class="bn-icon"><svg viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg></span>Formations</a>
+  <a href="/videos"><span class="bn-icon"><svg viewBox="0 0 24 24"><path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/></svg></span>Vidéos</a>
+  <a href="/communaute"><span class="bn-icon"><svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg></span>Communauté</a>
+</nav>
+
+<button class="back-to-top" id="back-to-top" aria-label="Retour en haut">
+  <svg viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>
+</button>
+
+<script src="/js/lumenia.js"></script>
+<script>
+(function () {
+  /* ═══════════════════════════════
+     CLÉS LOCALSTORAGE
+     ═══════════════════════════════ */
+  var K_POSTS   = 'lumenia-comm-posts';    // tous les posts
+  var K_MINE    = 'lumenia-comm-mine';     // IDs de mes posts
+  var K_LIKED   = 'lumenia-comm-liked';    // IDs des posts que j'ai likés
+  var K_LIKES   = 'lumenia-comm-likes';    // {postId: nombre de likes}
+  var K_REPLIES = 'lumenia-comm-replies';  // {postId: [{id,name,body,ts}]}
+  var K_MREPLIES= 'lumenia-comm-mreplies'; // IDs des réponses que j'ai écrites
+
+  /* ─── Helpers ─── */
+  function load(k, def) { try { return JSON.parse(localStorage.getItem(k) || 'null') || def; } catch(e) { return def; } }
+  function save(k, v) { localStorage.setItem(k, JSON.stringify(v)); }
+  function safe(s) { return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+  function ini(n) { return (n||'?').trim().split(/\s+/).map(function(w){return w[0].toUpperCase();}).slice(0,2).join(''); }
+  function fd(ts) {
+    var d = new Date(ts);
+    var m = ['jan.','fév.','mars','avr.','mai','juin','juil.','août','sept.','oct.','nov.','déc.'];
+    var now = Date.now();
+    var diff = Math.floor((now - ts) / 1000);
+    if (diff < 60) return 'à l\'instant';
+    if (diff < 3600) return Math.floor(diff/60) + ' min';
+    if (diff < 86400) return Math.floor(diff/3600) + 'h';
+    return d.getDate() + ' ' + m[d.getMonth()] + ' ' + d.getFullYear();
+  }
+  function uid() { return Date.now().toString(36) + Math.random().toString(36).slice(2,7); }
+
+  /* ─── State ─── */
+  var posts   = load(K_POSTS, []);
+  var mine    = load(K_MINE, []);
+  var liked   = load(K_LIKED, []);
+  var likes   = load(K_LIKES, {});
+  var replies = load(K_REPLIES, {});
+  var mreplies= load(K_MREPLIES, []);
+
+  var activeCat = 'Tous';
+  var searchQ   = '';
+
+  /* ═══════════════════════════════
+     RENDU DES POSTS
+     ═══════════════════════════════ */
+  function render() {
+    var container = document.getElementById('community-container');
+    var counter   = document.getElementById('listing-count');
+    if (!container) return;
+
+    var filtered = posts.filter(function(p) {
+      return (activeCat === 'Tous' || p.category === activeCat) &&
+        (!searchQ || (p.title||'').toLowerCase().includes(searchQ) ||
+                     (p.body||'').toLowerCase().includes(searchQ) ||
+                     (p.author||'').toLowerCase().includes(searchQ));
+    });
+
+    if (counter) counter.textContent = filtered.length + ' message' + (filtered.length !== 1 ? 's' : '');
+
+    if (!filtered.length) {
+      container.innerHTML = '<div class="empty-state"><div class="empty-icon">💬</div><p>' +
+        (searchQ || activeCat !== 'Tous' ? 'Aucun résultat pour cette recherche.' :
+         'Soyez le premier à publier dans la communauté !') + '</p></div>';
+      return;
+    }
+
+    container.innerHTML = filtered.map(function(p) {
+      return buildPostHTML(p);
+    }).join('');
+
+    attachPostEvents(container);
+  }
+
+  function getLikes(id) { return likes[id] || 0; }
+  function getReplies(id) { return replies[id] || []; }
+
+  function buildPostHTML(p) {
+    var isLiked = liked.indexOf(p.id) !== -1;
+    var likeCount = getLikes(p.id);
+    var postReplies = getReplies(p.id);
+    var isMine = mine.indexOf(p.id) !== -1;
+
+    var repliesHTML = '';
+    if (postReplies.length) {
+      repliesHTML = '<div class="replies-block">' +
+        '<div class="replies-list">' +
+        postReplies.map(function(r) {
+          var isMyReply = mreplies.indexOf(r.id) !== -1;
+          return '<div class="reply-item" data-reply-id="' + safe(r.id) + '">' +
+            '<div class="reply-avatar">' + safe(ini(r.name)) + '</div>' +
+            '<div class="reply-content">' +
+              '<div class="reply-author">' + safe(r.name) + '</div>' +
+              '<div class="reply-date">' + fd(r.ts) + '</div>' +
+              '<div class="reply-text">' + safe(r.body) + '</div>' +
+            '</div>' +
+            (isMyReply ? '<button class="reply-delete" data-post-id="' + safe(p.id) + '" data-reply-id="' + safe(r.id) + '" title="Supprimer ma réponse">🗑</button>' : '') +
+          '</div>';
+        }).join('') +
+        '</div>';
+      repliesHTML += '</div>';
+    }
+
+    return '<div class="post-card" data-post-id="' + safe(p.id) + '">' +
+      '<div class="post-header">' +
+        '<div class="post-avatar">' + safe(ini(p.author)) + '</div>' +
+        '<div class="post-meta">' +
+          '<div class="post-author">' + safe(p.author) + '</div>' +
+          '<div class="post-date">' + fd(p.ts) + '</div>' +
+        '</div>' +
+        (isMine ? '<button class="post-delete" data-id="' + safe(p.id) + '" title="Supprimer mon message">🗑</button>' : '') +
+      '</div>' +
+      '<div class="post-title">' + safe(p.title) + '</div>' +
+      '<div class="post-body">' + safe(p.body) + '</div>' +
+      '<div class="post-tags"><span class="post-tag">' + safe(p.category||'Général') + '</span></div>' +
+      '<div class="post-actions">' +
+        '<button class="action-btn like-btn' + (isLiked ? ' liked' : '') + '" data-id="' + safe(p.id) + '">' +
+          (isLiked ? '❤️' : '🤍') +
+          ' <span class="count">' + likeCount + '</span>' +
+          ' J\'aime' +
+        '</button>' +
+        '<button class="action-btn reply-toggle-btn" data-id="' + safe(p.id) + '">' +
+          '💬 ' + (postReplies.length ? postReplies.length + ' réponse' + (postReplies.length !== 1 ? 's' : '') : 'Répondre') +
+        '</button>' +
+      '</div>' +
+      repliesHTML +
+      '<div class="reply-form-wrap" id="reply-wrap-' + safe(p.id) + '">' +
+        '<form class="reply-form" data-post-id="' + safe(p.id) + '">' +
+          '<input type="text" class="reply-name-input" placeholder="Votre prénom *" maxlength="60" required/>' +
+          '<textarea class="reply-body-input" placeholder="Votre réponse…" maxlength="600" required></textarea>' +
+          '<div style="width:100%;display:flex;gap:8px;align-items:center">' +
+            '<button type="submit" class="reply-submit">Envoyer ↵</button>' +
+            '<button type="button" class="action-btn reply-cancel-btn" data-id="' + safe(p.id) + '" style="padding:8px 14px">Annuler</button>' +
+          '</div>' +
+        '</form>' +
+      '</div>' +
+    '</div>';
+  }
+
+  /* ═══════════════════════════════
+     ÉVÉNEMENTS DES POSTS
+     ═══════════════════════════════ */
+  function attachPostEvents(container) {
+    /* ── Supprimer un post ── */
+    container.querySelectorAll('.post-delete').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        if (!confirm('Supprimer ce message définitivement ?')) return;
+        var id = btn.dataset.id;
+        posts = posts.filter(function(p){ return p.id !== id; });
+        mine  = mine.filter(function(i){ return i !== id; });
+        delete likes[id];
+        delete replies[id];
+        liked = liked.filter(function(i){ return i !== id; });
+        save(K_POSTS, posts); save(K_MINE, mine);
+        save(K_LIKES, likes); save(K_REPLIES, replies); save(K_LIKED, liked);
+        buildChips(); render();
+      });
+    });
+
+    /* ── Like / Unlike ── */
+    container.querySelectorAll('.like-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var id = btn.dataset.id;
+        var isLiked = liked.indexOf(id) !== -1;
+        if (isLiked) {
+          liked = liked.filter(function(i){ return i !== id; });
+          likes[id] = Math.max(0, (likes[id]||0) - 1);
+        } else {
+          liked.push(id);
+          likes[id] = (likes[id]||0) + 1;
+        }
+        save(K_LIKED, liked); save(K_LIKES, likes);
+        /* mise à jour douce du bouton sans re-render */
+        var newLiked = liked.indexOf(id) !== -1;
+        btn.classList.toggle('liked', newLiked);
+        btn.innerHTML = (newLiked ? '❤️' : '🤍') + ' <span class="count">' + (likes[id]||0) + '</span> J\'aime';
+      });
+    });
+
+    /* ── Ouvrir/fermer le formulaire de réponse ── */
+    container.querySelectorAll('.reply-toggle-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var id = btn.dataset.id;
+        var wrap = document.getElementById('reply-wrap-' + id);
+        if (!wrap) return;
+        var open = wrap.classList.toggle('open');
+        if (open) {
+          var ni = wrap.querySelector('.reply-name-input');
+          if (ni) ni.focus();
+        }
+      });
+    });
+
+    container.querySelectorAll('.reply-cancel-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var wrap = document.getElementById('reply-wrap-' + btn.dataset.id);
+        if (wrap) wrap.classList.remove('open');
+      });
+    });
+
+    /* ── Soumettre une réponse ── */
+    container.querySelectorAll('.reply-form').forEach(function(form) {
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        var postId = form.dataset.postId;
+        var nameEl = form.querySelector('.reply-name-input');
+        var bodyEl = form.querySelector('.reply-body-input');
+        var name = (nameEl.value||'').trim();
+        var body = (bodyEl.value||'').trim();
+        if (!name || !body) return;
+
+        var id = uid();
+        var reply = { id: id, name: name, body: body, ts: Date.now() };
+        if (!replies[postId]) replies[postId] = [];
+        replies[postId].push(reply);
+        mreplies.push(id);
+        save(K_REPLIES, replies); save(K_MREPLIES, mreplies);
+
+        nameEl.value = ''; bodyEl.value = '';
+        var wrap = document.getElementById('reply-wrap-' + postId);
+        if (wrap) wrap.classList.remove('open');
+
+        render();
+      });
+    });
+
+    /* ── Supprimer une réponse ── */
+    container.querySelectorAll('.reply-delete').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        if (!confirm('Supprimer cette réponse ?')) return;
+        var postId = btn.dataset.postId;
+        var replyId = btn.dataset.replyId;
+        if (replies[postId]) {
+          replies[postId] = replies[postId].filter(function(r){ return r.id !== replyId; });
+        }
+        mreplies = mreplies.filter(function(i){ return i !== replyId; });
+        save(K_REPLIES, replies); save(K_MREPLIES, mreplies);
+        render();
+      });
+    });
+  }
+
+  /* ═══════════════════════════════
+     FILTRES PAR CATÉGORIE
+     ═══════════════════════════════ */
+  function buildChips() {
+    var fb = document.getElementById('filter-bar');
+    if (!fb) return;
+    var cats = ['Tous'];
+    posts.forEach(function(p) { if (p.category && cats.indexOf(p.category) === -1) cats.push(p.category); });
+    fb.innerHTML = cats.map(function(c) {
+      return '<button class="filter-chip' + (c === activeCat ? ' active' : '') + '" data-cat="' + safe(c) + '">' + safe(c) + '</button>';
+    }).join('');
+    fb.querySelectorAll('.filter-chip').forEach(function(chip) {
+      chip.addEventListener('click', function() {
+        activeCat = chip.dataset.cat;
+        fb.querySelectorAll('.filter-chip').forEach(function(c){ c.classList.remove('active'); });
+        chip.classList.add('active');
+        render();
+      });
+    });
+  }
+
+  /* ═══════════════════════════════
+     FORMULAIRE NOUVEAU POST
+     ═══════════════════════════════ */
+  function initForm() {
+    var form  = document.getElementById('new-post-form');
+    var errEl = document.getElementById('post-error');
+    if (!form) return;
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      errEl.style.display = 'none';
+      var name  = (form.querySelector('#post-name').value||'').trim();
+      var title = (form.querySelector('#post-title').value||'').trim();
+      var cat   = form.querySelector('#post-category').value;
+      var body  = (form.querySelector('#post-body').value||'').trim();
+
+      if (!name)  { errEl.textContent = "Merci d'indiquer votre prénom."; errEl.style.display='block'; form.querySelector('#post-name').focus(); return; }
+      if (!title) { errEl.textContent = "Merci d'ajouter un titre."; errEl.style.display='block'; form.querySelector('#post-title').focus(); return; }
+      if (!body)  { errEl.textContent = "Le message ne peut pas être vide."; errEl.style.display='block'; form.querySelector('#post-body').focus(); return; }
+
+      var id = uid();
+      posts.unshift({ id: id, author: name, title: title, body: body, category: cat, ts: Date.now() });
+      mine.push(id);
+      save(K_POSTS, posts); save(K_MINE, mine);
+
+      form.reset();
+      activeCat = 'Tous';
+      buildChips();
+      render();
+
+      var c = document.getElementById('community-container');
+      if (c) c.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  }
+
+  /* ═══════════════════════════════
+     RECHERCHE
+     ═══════════════════════════════ */
+  function initSearch() {
+    var si = document.getElementById('search-input');
+    if (si) si.addEventListener('input', function() { searchQ = si.value.trim().toLowerCase(); render(); });
+  }
+
+  /* ═══════════════════════════════
+     INIT
+     ═══════════════════════════════ */
+  function init() {
+    buildChips();
+    render();
+    initForm();
+    initSearch();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+
+})();
+</script>
+
+</body>
+</html>
