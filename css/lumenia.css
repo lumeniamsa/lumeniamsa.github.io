@@ -177,57 +177,6 @@ body {
 }
 .theme-toggle:hover { background: var(--bg); border-color: var(--blue); transform: scale(1.1); }
 
-/* Bouton thème dans le menu mobile */
-.theme-toggle-mobile {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  width: 100%;
-  margin-top: 6px;
-  padding: 11px 14px;
-  border-radius: 10px;
-  font-size: .95rem;
-  text-align: left;
-  margin-right: 0;
-  gap: 8px;
-  color: var(--text);
-}
-.theme-toggle-mobile::after {
-  content: ' Mode sombre / clair';
-  font-size: .88rem;
-  font-weight: 500;
-  font-family: 'Inter', sans-serif;
-}
-
-/* Bouton flottant mode sombre — visible uniquement sur mobile */
-.theme-toggle-float {
-  display: none;
-}
-@media (max-width: 767px) {
-  .theme-toggle-float {
-    display: flex;
-    position: fixed;
-    top: 14px;
-    right: 14px;
-    z-index: 300;
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    background: var(--white);
-    border: 1.5px solid var(--border);
-    box-shadow: 0 2px 12px rgba(0,0,0,.12);
-    align-items: center;
-    justify-content: center;
-    font-size: 1.05rem;
-    padding: 0;
-    cursor: pointer;
-    transition: background .15s, border-color .15s, transform .15s;
-    line-height: 1;
-  }
-  .theme-toggle-float:hover { border-color: var(--blue); transform: scale(1.1); }
-  html.dark .theme-toggle-float { background: var(--white); border-color: var(--border); }
-}
-
 /* ── SEARCH BAR ── */
 .search-bar {
   position: relative;
@@ -910,9 +859,6 @@ body {
   .site-header { padding: 0 16px; }
   .site-nav { display: none; }
   .hamburger { display: flex; }
-  /* Le toggle thème dans le header est caché sur mobile,
-     le bouton dans le menu mobile prend le relais */
-  .site-header .theme-toggle:not(.theme-toggle-mobile) { display: none; }
   body { padding-bottom: calc(var(--bottom-nav-h) + 28px); }
   .bottom-nav { display: flex; }
   .back-to-top { bottom: calc(var(--bottom-nav-h) + 30px); right: 16px; }
@@ -1255,12 +1201,6 @@ body {
 html.dark .comment-reply     { background: #0f172a; border-color: var(--border); }
 html.dark .comment-reply-btn { color: var(--blue); }
 html.dark .reply-form        { background: #0f172a; border-color: var(--blue); }
-html.dark .comment-text      { color: #cbd5e1; }
-html.dark .comment-name      { color: var(--text); }
-html.dark .comment-delete:hover { background: #3d1e28; }
-html.dark ::-webkit-scrollbar-track { background: #1e293b; }
-html.dark ::-webkit-scrollbar-thumb { background: #334155; }
-html.dark .theme-toggle-mobile { color: var(--text); }
 
 /* ══════════════════════════════════════════════════════
    MODALE CRÉATION DE PUBLICATION COMMUNAUTÉ
