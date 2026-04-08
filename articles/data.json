@@ -1,21 +1,5 @@
 [
   {
-    "title": "Méta-Apprentissage : La compétence ultime du XXIe siècle",
-    "category": "Éducation & Performance",
-    "date": "15 mars 2026",
-    "icon": "🚀",
-    "description": "Découvrez le méta-apprentissage : l'art d'apprendre à apprendre pour doubler votre vitesse d'acquisition de compétences.",
-    "url": "/articles/meta-apprentissage-apprendre-a-apprendre.html"
-  },
-  {
-    "title": "Neuroplasticité Dirigée : Devenez l'architecte de votre cerveau",
-    "category": "Santé & Mindset",
-    "date": "18 mars 2026",
-    "icon": "🧠",
-    "description": "Apprenez à hacker votre cerveau grâce à la neuroplasticité dirigée. Redessinez vos habitudes et vos capacités cognitives.",
-    "url": "/articles/neuroplasticite-dirigee.html"
-  },
-  {
     "title": "L'Ombre et le Leadership : Intégrer sa part obscure pour doubler sa puissance",
     "category": "Psychologie",
     "date": "24 février 2026",
@@ -30,110 +14,6 @@
     "icon": "✨",
     "description": "Réapprendre à briller sans s'épuiser : un article inspirant sur la lumière intérieure et la croissance personnelle.",
     "url": "/articles/reapprendre-a-briller.html"
-  },
-  {
-    "title": "État de Flow : La science de la performance sans effort",
-    "category": "Productivité & Psychologie",
-    "date": "28 février 2026",
-    "icon": "🌊",
-    "description": "Découvrez la science de l'état de flow : comment atteindre une performance maximale sans effort et transformer votre travail en plaisir.",
-    "url": "/articles/etat-de-flow-performance-sans-effort.html"
-  },
-  {
-    "title": "Le Miroir Algorithmique : Ce que l'IA révèle de nous",
-    "category": "Technologie",
-    "date": "15 mars 2026",
-    "icon": "🤖",
-    "description": "L'IA est-elle vraiment neutre ? Explorez le concept du miroir algorithmique et ce qu'il révèle sur l'humanité.",
-    "url": "/articles/ethique-algorithmique.html"
-  },
-  {
-    "title": "Influence vs Manipulation : La frontière de l'intégrité",
-    "category": "Leadership & Éthique",
-    "date": "15 fevrier 2026",
-    "icon": "⚖️",
-    "description": "Découvrez la frontière subtile entre influence et manipulation. Apprenez à convaincre avec intégrité pour un leadership durable.",
-    "url": "/articles/ethique-de-influence-vs-manipulation.html"
-  },
-  {
-    "title": "Fatigue mentale à l’ère numérique",
-    "category": "Développement personnel",
-    "date": "8 avril 2026",
-    "icon": "🧠",
-    "description": "Découvrez comment la fatigue mentale liée à l’ère numérique impacte votre vie et apprenez des stratégies puissantes pour reprendre le contrôle de votre esprit.",
-    "url": "/articles/fatigue-mentale-numerique-burnout-digital.html"
-  },
-  {
-    "title": "Ikigai : Votre boussole pour une vie pleine de sens",
-    "category": "Spiritualité & Sens",
-    "date": "25 mars 2026",
-    "icon": "🧭",
-    "description": "Découvrez l'Ikigai : la boussole japonaise pour trouver votre mission de vie à l'intersection de la passion, du talent et de la contribution.",
-    "url": "/articles/ikigai-la-boussole-du-sens.html"
-  },
-  {
-    "title": "L'illusion de la certitude : le mur qui freine ton évolution",
-    "category": "Philosophie",
-    "date": "1 avril 2026",
-    "icon": "🌊",
-    "description": "Pourquoi vouloir tout contrôler nous empêche de progresser. Apprenez à embrasser l'incertitude pour libérer votre esprit.",
-    "url": "/articles/l'illusion-de-la-certitude-_-le-mur-qui-freine-ton-évolution.html"
-  },
-  {
-    "title": "La vérité que tu fuis",
-    "category": "Réflexion",
-    "date": "1 avril 2026",
-    "icon": "🧠",
-    "description": "Et si ce qui te bloque n’était pas le monde, mais toi-même ? Une réflexion profonde et percutante sur la vérité que nous évitons tous.",
-    "url": "/articles/la-verite-que-tu-fuis.html"
-  },
-  {
-    "title": "Le mythe du multitasking : pourquoi faire tout à la fois vous rend moins intelligent",
-    "category": "Mindset",
-    "date": "5 mars 2026",
-    "icon": "🎯",
-    "description": "Faire plusieurs choses à la fois ne vous rend pas plus productif, cela détruit votre concentration. Découvrez comment retrouver l'hyperfocus.",
-    "url": "/articles/le-mythe-du-multitasking.html"
-  },
-  {
-    "title": "Le nerf vague : La clé biologique du calme instantané",
-    "category": "Santé Mentale",
-    "date": "12 mars 2026",
-    "icon": "🧘",
-    "description": "Découvrez le nerf vague, le bouton reset de votre système nerveux. Apprenez des techniques simples pour éteindre l'anxiété instantanément.",
-    "url": "/articles/le-nerf-vague-cle-du-calme.html"
-  },
-  {
-    "title": "Le piège de la vie automatique",
-    "category": "Réflexion",
-    "date": "1 avril 2026",
-    "icon": "🧠",
-    "description": "Et si tu vivais en pilote automatique sans t'en rendre compte ? Découvre comment reprendre le contrôle de ta vie et penser autrement.",
-    "url": "/articles/le-piege-de-la-vie-automatique.html"
-  },
-  {
-    "title": "Le syndrome de l'imposteur : Pourquoi c'est une excellente nouvelle",
-    "category": "Mindset & Psychologie",
-    "date": "1 avril 2026",
-    "icon": "🎭",
-    "description": "Et si votre sentiment d'illégitimité était en réalité votre plus grand atout ? Apprenez à transformer le syndrome de l'imposteur en moteur.",
-    "url": "/articles/le-syndrome-de-l-imposteur-un-allie.html"
-  },
-  {
-    "title": "Le transhumanisme : L'humain est-il devenu obsolète ?",
-    "category": "Réflexion & Technologie",
-    "date": "28 mars 2026",
-    "icon": "🦾",
-    "description": "Puces cérébrales, immortalité, augmentation biologique : le transhumanisme redéfinit l'humain. Jusqu'où pouvons-nous aller sans nous perdre ?",
-    "url": "/articles/le-transhumanisme-et-essence-humaine.html"
-  },
-  {
-    "title": "5 conseils pour mieux gérer le temps",
-    "category": "Développement personnel",
-    "date": "30 mars 2026",
-    "icon": "📝",
-    "description": "Découvrez 5 conseils pratiques pour mieux gérer votre temps, gagner en productivité et réduire le stress au quotidien.",
-    "url": "/articles/5-conseils-pour-mieux-gerer-le-temps.html"
   },
   {
     "title": "Amor Fati : L'art de transformer le pire en meilleur",
@@ -214,5 +94,125 @@
     "icon": "🧬",
     "description": "Vos gènes ne sont pas une fatalité. Découvrez comment l'épigénétique vous permet de modifier l'expression de votre ADN par vos choix de vie.",
     "url": "/articles/epigenetique-au-dela-de-adn.html"
+  },
+  {
+    "title": "État de Flow : La science de la performance sans effort",
+    "category": "Productivité & Psychologie",
+    "date": "28 février 2026",
+    "icon": "🌊",
+    "description": "Découvrez la science de l'état de flow : comment atteindre une performance maximale sans effort et transformer votre travail en plaisir.",
+    "url": "/articles/etat-de-flow-performance-sans-effort.html"
+  },
+  {
+    "title": "Le Miroir Algorithmique : Ce que l'IA révèle de nous",
+    "category": "Technologie",
+    "date": "15 mars 2026",
+    "icon": "🤖",
+    "description": "L'IA est-elle vraiment neutre ? Explorez le concept du miroir algorithmique et ce qu'il révèle sur l'humanité.",
+    "url": "/articles/ethique-algorithmique.html"
+  },
+  {
+    "title": "Influence vs Manipulation : La frontière de l'intégrité",
+    "category": "Leadership & Éthique",
+    "date": "15 fevrier 2026",
+    "icon": "⚖️",
+    "description": "Découvrez la frontière subtile entre influence et manipulation. Apprenez à convaincre avec intégrité pour un leadership durable.",
+    "url": "/articles/ethique-de-influence-vs-manipulation.html"
+  },
+  {
+    "title": "Fatigue mentale à l’ère numérique",
+    "category": "Développement personnel",
+    "date": "8 avril 2026",
+    "icon": "🧠",
+    "description": "Comprenez la fatigue mentale à l’ère numérique et découvrez comment retrouver clarté, énergie et concentration.",
+    "url": "/articles/fatigue-mentale-numerique-burnout-digital.html"
+  },
+  {
+    "title": "Ikigai : Votre boussole pour une vie pleine de sens",
+    "category": "Spiritualité & Sens",
+    "date": "25 mars 2026",
+    "icon": "🧭",
+    "description": "Découvrez l'Ikigai : la boussole japonaise pour trouver votre mission de vie à l'intersection de la passion, du talent et de la contribution.",
+    "url": "/articles/ikigai-la-boussole-du-sens.html"
+  },
+  {
+    "title": "L'illusion de la certitude : le mur qui freine ton évolution",
+    "category": "Philosophie",
+    "date": "1 avril 2026",
+    "icon": "🌊",
+    "description": "Pourquoi vouloir tout contrôler nous empêche de progresser. Apprenez à embrasser l'incertitude pour libérer votre esprit.",
+    "url": "/articles/l'illusion-de-la-certitude-_-le-mur-qui-freine-ton-évolution.html"
+  },
+  {
+    "title": "La vérité que tu fuis",
+    "category": "Réflexion",
+    "date": "1 avril 2026",
+    "icon": "🧠",
+    "description": "Et si ce qui te bloque n’était pas le monde, mais toi-même ? Une réflexion profonde et percutante sur la vérité que nous évitons tous.",
+    "url": "/articles/la-verite-que-tu-fuis.html"
+  },
+  {
+    "title": "Le mythe du multitasking : pourquoi faire tout à la fois vous rend moins intelligent",
+    "category": "Mindset",
+    "date": "5 mars 2026",
+    "icon": "🎯",
+    "description": "Faire plusieurs choses à la fois ne vous rend pas plus productif, cela détruit votre concentration. Découvrez comment retrouver l'hyperfocus.",
+    "url": "/articles/le-mythe-du-multitasking.html"
+  },
+  {
+    "title": "Le nerf vague : La clé biologique du calme instantané",
+    "category": "Santé Mentale",
+    "date": "12 mars 2026",
+    "icon": "🧘",
+    "description": "Découvrez le nerf vague, le bouton reset de votre système nerveux. Apprenez des techniques simples pour éteindre l'anxiété instantanément.",
+    "url": "/articles/le-nerf-vague-cle-du-calme.html"
+  },
+  {
+    "title": "Le piège de la vie automatique",
+    "category": "Réflexion",
+    "date": "1 avril 2026",
+    "icon": "🧠",
+    "description": "Et si tu vivais en pilote automatique sans t'en rendre compte ? Découvre comment reprendre le contrôle de ta vie et penser autrement.",
+    "url": "/articles/le-piege-de-la-vie-automatique.html"
+  },
+  {
+    "title": "Le syndrome de l'imposteur : Pourquoi c'est une excellente nouvelle",
+    "category": "Mindset & Psychologie",
+    "date": "1 avril 2026",
+    "icon": "🎭",
+    "description": "Et si votre sentiment d'illégitimité était en réalité votre plus grand atout ? Apprenez à transformer le syndrome de l'imposteur en moteur.",
+    "url": "/articles/le-syndrome-de-l-imposteur-un-allie.html"
+  },
+  {
+    "title": "Le transhumanisme : L'humain est-il devenu obsolète ?",
+    "category": "Réflexion & Technologie",
+    "date": "28 mars 2026",
+    "icon": "🦾",
+    "description": "Puces cérébrales, immortalité, augmentation biologique : le transhumanisme redéfinit l'humain. Jusqu'où pouvons-nous aller sans nous perdre ?",
+    "url": "/articles/le-transhumanisme-et-essence-humaine.html"
+  },
+  {
+    "title": "Méta-Apprentissage : La compétence ultime du XXIe siècle",
+    "category": "Éducation & Performance",
+    "date": "15 mars 2026",
+    "icon": "🚀",
+    "description": "Découvrez le méta-apprentissage : l'art d'apprendre à apprendre pour doubler votre vitesse d'acquisition de compétences.",
+    "url": "/articles/meta-apprentissage-apprendre-a-apprendre.html"
+  },
+  {
+    "title": "Neuroplasticité Dirigée : Devenez l'architecte de votre cerveau",
+    "category": "Santé & Mindset",
+    "date": "18 mars 2026",
+    "icon": "🧠",
+    "description": "Apprenez à hacker votre cerveau grâce à la neuroplasticité dirigée. Redessinez vos habitudes et vos capacités cognitives.",
+    "url": "/articles/neuroplasticite-dirigee.html"
+  },
+  {
+    "title": "5 conseils pour mieux gérer le temps",
+    "category": "Développement personnel",
+    "date": "30 mars 2026",
+    "icon": "📝",
+    "description": "Découvrez 5 conseils pratiques pour mieux gérer votre temps, gagner en productivité et réduire le stress au quotidien.",
+    "url": "/articles/5-conseils-pour-mieux-gerer-le-temps.html"
   }
 ]
