@@ -1,61 +1,5 @@
 [
   {
-    "title": "La vérité que tu fuis",
-    "category": "Réflexion",
-    "date": "1 avril 2026",
-    "icon": "🧠",
-    "description": "Et si ce qui te bloque n’était pas le monde, mais toi-même ? Une réflexion profonde et percutante sur la vérité que nous évitons tous.",
-    "url": "/articles/la-verite-que-tu-fuis.html"
-  },
-  {
-    "title": "Le mythe du multitasking : pourquoi faire tout à la fois vous rend moins intelligent",
-    "category": "Mindset",
-    "date": "5 mars 2026",
-    "icon": "🎯",
-    "description": "Faire plusieurs choses à la fois ne vous rend pas plus productif, cela détruit votre concentration. Découvrez comment retrouver l'hyperfocus.",
-    "url": "/articles/le-mythe-du-multitasking.html"
-  },
-  {
-    "title": "Le nerf vague : La clé biologique du calme instantané",
-    "category": "Santé Mentale",
-    "date": "12 mars 2026",
-    "icon": "🧘",
-    "description": "Découvrez le nerf vague, le bouton reset de votre système nerveux. Apprenez des techniques simples pour éteindre l'anxiété instantanément.",
-    "url": "/articles/le-nerf-vague-cle-du-calme.html"
-  },
-  {
-    "title": "Le piège de la vie automatique",
-    "category": "Réflexion",
-    "date": "1 avril 2026",
-    "icon": "🧠",
-    "description": "Et si tu vivais en pilote automatique sans t'en rendre compte ? Découvre comment reprendre le contrôle de ta vie et penser autrement.",
-    "url": "/articles/le-piege-de-la-vie-automatique.html"
-  },
-  {
-    "title": "Le syndrome de l'imposteur : Pourquoi c'est une excellente nouvelle",
-    "category": "Mindset & Psychologie",
-    "date": "1 avril 2026",
-    "icon": "🎭",
-    "description": "Et si votre sentiment d'illégitimité était en réalité votre plus grand atout ? Apprenez à transformer le syndrome de l'imposteur en moteur.",
-    "url": "/articles/le-syndrome-de-l-imposteur-un-allie.html"
-  },
-  {
-    "title": "Le transhumanisme : L'humain est-il devenu obsolète ?",
-    "category": "Réflexion & Technologie",
-    "date": "28 mars 2026",
-    "icon": "🦾",
-    "description": "Puces cérébrales, immortalité, augmentation biologique : le transhumanisme redéfinit l'humain. Jusqu'où pouvons-nous aller sans nous perdre ?",
-    "url": "/articles/le-transhumanisme-et-essence-humaine.html"
-  },
-  {
-    "title": "Méta-Apprentissage : La compétence ultime du XXIe siècle",
-    "category": "Éducation & Performance",
-    "date": "15 mars 2026",
-    "icon": "🚀",
-    "description": "Découvrez le méta-apprentissage : l'art d'apprendre à apprendre pour doubler votre vitesse d'acquisition de compétences.",
-    "url": "/articles/meta-apprentissage-apprendre-a-apprendre.html"
-  },
-  {
     "title": "Neuroplasticité Dirigée : Devenez l'architecte de votre cerveau",
     "category": "Santé & Mindset",
     "date": "18 mars 2026",
@@ -184,6 +128,14 @@
     "url": "/articles/ethique-de-influence-vs-manipulation.html"
   },
   {
+    "title": "La fatigue mentale à l’ère numérique",
+    "category": "Article",
+    "date": "",
+    "icon": "📝",
+    "description": "",
+    "url": "/articles/fatigue-mentale-ere-numerique.html"
+  },
+  {
     "title": "Ikigai : Votre boussole pour une vie pleine de sens",
     "category": "Spiritualité & Sens",
     "date": "25 mars 2026",
@@ -198,6 +150,62 @@
     "icon": "🌊",
     "description": "Pourquoi vouloir tout contrôler nous empêche de progresser. Apprenez à embrasser l'incertitude pour libérer votre esprit.",
     "url": "/articles/l'illusion-de-la-certitude-_-le-mur-qui-freine-ton-évolution.html"
+  },
+  {
+    "title": "La vérité que tu fuis",
+    "category": "Réflexion",
+    "date": "1 avril 2026",
+    "icon": "🧠",
+    "description": "Et si ce qui te bloque n’était pas le monde, mais toi-même ? Une réflexion profonde et percutante sur la vérité que nous évitons tous.",
+    "url": "/articles/la-verite-que-tu-fuis.html"
+  },
+  {
+    "title": "Le mythe du multitasking : pourquoi faire tout à la fois vous rend moins intelligent",
+    "category": "Mindset",
+    "date": "5 mars 2026",
+    "icon": "🎯",
+    "description": "Faire plusieurs choses à la fois ne vous rend pas plus productif, cela détruit votre concentration. Découvrez comment retrouver l'hyperfocus.",
+    "url": "/articles/le-mythe-du-multitasking.html"
+  },
+  {
+    "title": "Le nerf vague : La clé biologique du calme instantané",
+    "category": "Santé Mentale",
+    "date": "12 mars 2026",
+    "icon": "🧘",
+    "description": "Découvrez le nerf vague, le bouton reset de votre système nerveux. Apprenez des techniques simples pour éteindre l'anxiété instantanément.",
+    "url": "/articles/le-nerf-vague-cle-du-calme.html"
+  },
+  {
+    "title": "Le piège de la vie automatique",
+    "category": "Réflexion",
+    "date": "1 avril 2026",
+    "icon": "🧠",
+    "description": "Et si tu vivais en pilote automatique sans t'en rendre compte ? Découvre comment reprendre le contrôle de ta vie et penser autrement.",
+    "url": "/articles/le-piege-de-la-vie-automatique.html"
+  },
+  {
+    "title": "Le syndrome de l'imposteur : Pourquoi c'est une excellente nouvelle",
+    "category": "Mindset & Psychologie",
+    "date": "1 avril 2026",
+    "icon": "🎭",
+    "description": "Et si votre sentiment d'illégitimité était en réalité votre plus grand atout ? Apprenez à transformer le syndrome de l'imposteur en moteur.",
+    "url": "/articles/le-syndrome-de-l-imposteur-un-allie.html"
+  },
+  {
+    "title": "Le transhumanisme : L'humain est-il devenu obsolète ?",
+    "category": "Réflexion & Technologie",
+    "date": "28 mars 2026",
+    "icon": "🦾",
+    "description": "Puces cérébrales, immortalité, augmentation biologique : le transhumanisme redéfinit l'humain. Jusqu'où pouvons-nous aller sans nous perdre ?",
+    "url": "/articles/le-transhumanisme-et-essence-humaine.html"
+  },
+  {
+    "title": "Méta-Apprentissage : La compétence ultime du XXIe siècle",
+    "category": "Éducation & Performance",
+    "date": "15 mars 2026",
+    "icon": "🚀",
+    "description": "Découvrez le méta-apprentissage : l'art d'apprendre à apprendre pour doubler votre vitesse d'acquisition de compétences.",
+    "url": "/articles/meta-apprentissage-apprendre-a-apprendre.html"
   },
   {
     "title": "5 conseils pour mieux gérer le temps",
