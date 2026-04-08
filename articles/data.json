@@ -1,29 +1,5 @@
 [
   {
-    "title": "Le piège de la vie automatique",
-    "category": "Réflexion",
-    "date": "1 avril 2026",
-    "icon": "🧠",
-    "description": "Et si tu vivais en pilote automatique sans t'en rendre compte ? Découvre comment reprendre le contrôle de ta vie et penser autrement.",
-    "url": "/articles/le-piege-de-la-vie-automatique.html"
-  },
-  {
-    "title": "Le syndrome de l'imposteur : Pourquoi c'est une excellente nouvelle",
-    "category": "Mindset & Psychologie",
-    "date": "1 avril 2026",
-    "icon": "🎭",
-    "description": "Et si votre sentiment d'illégitimité était en réalité votre plus grand atout ? Apprenez à transformer le syndrome de l'imposteur en moteur.",
-    "url": "/articles/le-syndrome-de-l-imposteur-un-allie.html"
-  },
-  {
-    "title": "Le transhumanisme : L'humain est-il devenu obsolète ?",
-    "category": "Réflexion & Technologie",
-    "date": "28 mars 2026",
-    "icon": "🦾",
-    "description": "Puces cérébrales, immortalité, augmentation biologique : le transhumanisme redéfinit l'humain. Jusqu'où pouvons-nous aller sans nous perdre ?",
-    "url": "/articles/le-transhumanisme-et-essence-humaine.html"
-  },
-  {
     "title": "Méta-Apprentissage : La compétence ultime du XXIe siècle",
     "category": "Éducation & Performance",
     "date": "15 mars 2026",
@@ -56,38 +32,6 @@
     "url": "/articles/reapprendre-a-briller.html"
   },
   {
-    "title": "Écosophie Profonde : Au-delà de la survie, la symbiose",
-    "category": "Environnement",
-    "date": "15 mars 2026",
-    "icon": "🌿",
-    "description": "Dépasser l'écologie de façade pour comprendre notre interdépendance radicale avec le vivant. Une réflexion sur l'écosophie.",
-    "url": "/articles/ecosophie-profonde.html"
-  },
-  {
-    "title": "Éloge de l'ennui créateur : Pourquoi ne rien faire est vital",
-    "category": "Créativité",
-    "date": "2 mars 2026",
-    "icon": "☁️",
-    "description": "Pourquoi l'absence de stimulation est le moteur secret de la créativité. Apprenez à redécouvrir l'ennui pour libérer votre cerveau.",
-    "url": "/articles/eloge-de-ennui-createur.html"
-  },
-  {
-    "title": "L'Entropie : l'ennemi invisible de votre Business",
-    "category": "Business",
-    "date": "1 avril 2026",
-    "icon": "📉",
-    "description": "Découvrez comment l'entropie détruit silencieusement les entreprises et comment réinjecter de l'énergie pour survivre.",
-    "url": "/articles/entropie-organisationnelle.html"
-  },
-  {
-    "title": "Épigénétique : Pourquoi votre ADN n'est pas votre destin",
-    "category": "Santé & Science",
-    "date": "18 mars 2026",
-    "icon": "🧬",
-    "description": "Vos gènes ne sont pas une fatalité. Découvrez comment l'épigénétique vous permet de modifier l'expression de votre ADN par vos choix de vie.",
-    "url": "/articles/epigenetique-au-dela-de-adn.html"
-  },
-  {
     "title": "État de Flow : La science de la performance sans effort",
     "category": "Productivité & Psychologie",
     "date": "28 février 2026",
@@ -110,6 +54,14 @@
     "icon": "⚖️",
     "description": "Découvrez la frontière subtile entre influence et manipulation. Apprenez à convaincre avec intégrité pour un leadership durable.",
     "url": "/articles/ethique-de-influence-vs-manipulation.html"
+  },
+  {
+    "title": "Fatigue mentale à l’ère numérique",
+    "category": "Développement personnel",
+    "date": "8 avril 2026",
+    "icon": "🧠",
+    "description": "Découvrez comment la fatigue mentale liée à l’ère numérique impacte votre vie et apprenez des stratégies puissantes pour reprendre le contrôle de votre esprit.",
+    "url": "/articles/fatigue-mentale-numerique-burnout-digital.html"
   },
   {
     "title": "Ikigai : Votre boussole pour une vie pleine de sens",
@@ -150,6 +102,30 @@
     "icon": "🧘",
     "description": "Découvrez le nerf vague, le bouton reset de votre système nerveux. Apprenez des techniques simples pour éteindre l'anxiété instantanément.",
     "url": "/articles/le-nerf-vague-cle-du-calme.html"
+  },
+  {
+    "title": "Le piège de la vie automatique",
+    "category": "Réflexion",
+    "date": "1 avril 2026",
+    "icon": "🧠",
+    "description": "Et si tu vivais en pilote automatique sans t'en rendre compte ? Découvre comment reprendre le contrôle de ta vie et penser autrement.",
+    "url": "/articles/le-piege-de-la-vie-automatique.html"
+  },
+  {
+    "title": "Le syndrome de l'imposteur : Pourquoi c'est une excellente nouvelle",
+    "category": "Mindset & Psychologie",
+    "date": "1 avril 2026",
+    "icon": "🎭",
+    "description": "Et si votre sentiment d'illégitimité était en réalité votre plus grand atout ? Apprenez à transformer le syndrome de l'imposteur en moteur.",
+    "url": "/articles/le-syndrome-de-l-imposteur-un-allie.html"
+  },
+  {
+    "title": "Le transhumanisme : L'humain est-il devenu obsolète ?",
+    "category": "Réflexion & Technologie",
+    "date": "28 mars 2026",
+    "icon": "🦾",
+    "description": "Puces cérébrales, immortalité, augmentation biologique : le transhumanisme redéfinit l'humain. Jusqu'où pouvons-nous aller sans nous perdre ?",
+    "url": "/articles/le-transhumanisme-et-essence-humaine.html"
   },
   {
     "title": "5 conseils pour mieux gérer le temps",
@@ -206,5 +182,37 @@
     "icon": "👁️",
     "description": "Votre attention est la ressource la plus précieuse au monde. Découvrez comment les géants de la tech la piratent et comment reprendre le contrôle.",
     "url": "/articles/economie-de-l-attention-or-moderne.html"
+  },
+  {
+    "title": "Écosophie Profonde : Au-delà de la survie, la symbiose",
+    "category": "Environnement",
+    "date": "15 mars 2026",
+    "icon": "🌿",
+    "description": "Dépasser l'écologie de façade pour comprendre notre interdépendance radicale avec le vivant. Une réflexion sur l'écosophie.",
+    "url": "/articles/ecosophie-profonde.html"
+  },
+  {
+    "title": "Éloge de l'ennui créateur : Pourquoi ne rien faire est vital",
+    "category": "Créativité",
+    "date": "2 mars 2026",
+    "icon": "☁️",
+    "description": "Pourquoi l'absence de stimulation est le moteur secret de la créativité. Apprenez à redécouvrir l'ennui pour libérer votre cerveau.",
+    "url": "/articles/eloge-de-ennui-createur.html"
+  },
+  {
+    "title": "L'Entropie : l'ennemi invisible de votre Business",
+    "category": "Business",
+    "date": "1 avril 2026",
+    "icon": "📉",
+    "description": "Découvrez comment l'entropie détruit silencieusement les entreprises et comment réinjecter de l'énergie pour survivre.",
+    "url": "/articles/entropie-organisationnelle.html"
+  },
+  {
+    "title": "Épigénétique : Pourquoi votre ADN n'est pas votre destin",
+    "category": "Santé & Science",
+    "date": "18 mars 2026",
+    "icon": "🧬",
+    "description": "Vos gènes ne sont pas une fatalité. Découvrez comment l'épigénétique vous permet de modifier l'expression de votre ADN par vos choix de vie.",
+    "url": "/articles/epigenetique-au-dela-de-adn.html"
   }
 ]
