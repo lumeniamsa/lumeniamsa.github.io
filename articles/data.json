@@ -1,5 +1,37 @@
 [
   {
+    "title": "Le piège de la vie automatique",
+    "category": "Réflexion",
+    "date": "1 avril 2026",
+    "icon": "🧠",
+    "description": "Et si tu vivais en pilote automatique sans t'en rendre compte ? Découvre comment reprendre le contrôle de ta vie et penser autrement.",
+    "url": "/articles/le-piege-de-la-vie-automatique.html"
+  },
+  {
+    "title": "Le syndrome de l'imposteur : Pourquoi c'est une excellente nouvelle",
+    "category": "Mindset & Psychologie",
+    "date": "1 avril 2026",
+    "icon": "🎭",
+    "description": "Et si votre sentiment d'illégitimité était en réalité votre plus grand atout ? Apprenez à transformer le syndrome de l'imposteur en moteur.",
+    "url": "/articles/le-syndrome-de-l-imposteur-un-allie.html"
+  },
+  {
+    "title": "Le transhumanisme : L'humain est-il devenu obsolète ?",
+    "category": "Réflexion & Technologie",
+    "date": "28 mars 2026",
+    "icon": "🦾",
+    "description": "Puces cérébrales, immortalité, augmentation biologique : le transhumanisme redéfinit l'humain. Jusqu'où pouvons-nous aller sans nous perdre ?",
+    "url": "/articles/le-transhumanisme-et-essence-humaine.html"
+  },
+  {
+    "title": "Méta-Apprentissage : La compétence ultime du XXIe siècle",
+    "category": "Éducation & Performance",
+    "date": "15 mars 2026",
+    "icon": "🚀",
+    "description": "Découvrez le méta-apprentissage : l'art d'apprendre à apprendre pour doubler votre vitesse d'acquisition de compétences.",
+    "url": "/articles/meta-apprentissage-apprendre-a-apprendre.html"
+  },
+  {
     "title": "Neuroplasticité Dirigée : Devenez l'architecte de votre cerveau",
     "category": "Santé & Mindset",
     "date": "18 mars 2026",
@@ -22,54 +54,6 @@
     "icon": "✨",
     "description": "Réapprendre à briller sans s'épuiser : un article inspirant sur la lumière intérieure et la croissance personnelle.",
     "url": "/articles/reapprendre-a-briller.html"
-  },
-  {
-    "title": "Amor Fati : L'art de transformer le pire en meilleur",
-    "category": "Philosophie",
-    "date": "12 mars 2026",
-    "icon": "🔥",
-    "description": "Découvrez l'Amor Fati, le concept philosophique pour cesser de subir la vie et transformer chaque obstacle en opportunité.",
-    "url": "/articles/amor-fati-aimer-le-destin.html"
-  },
-  {
-    "title": "Antifragilité : Pourquoi vous avez besoin du chaos",
-    "category": "Business & Stratégie",
-    "date": "10 mars 2026",
-    "icon": "💎",
-    "description": "Découvrez le concept d'antifragilité : comment ne plus seulement résister aux chocs, mais s'en servir pour devenir plus fort.",
-    "url": "/articles/antifragilite-procurer-par-le-desordre.html"
-  },
-  {
-    "title": "Biomimétisme : La nature est la meilleure ingénieure du monde",
-    "category": "Science & Environnement",
-    "date": "20 mars 2026",
-    "icon": "🍃",
-    "description": "Découvrez le biomimétisme : comment la nature inspire les technologies de demain, du TGV au dessalement de l'eau.",
-    "url": "/articles/biomimetisme-ingenierie-de-la-nature.html"
-  },
-  {
-    "title": "Chronos vs Kairos : Maîtriser le temps, pas seulement l'horloge",
-    "category": "Philosophie & Vie",
-    "date": "20 fevrier 2026",
-    "icon": "⏳",
-    "description": "Découvrez la différence entre Chronos et Kairos. Apprenez à ne plus seulement gérer vos minutes, mais à saisir les opportunités de la vie.",
-    "url": "/articles/chronos-vs-kairos-maitriser-le-temps.html"
-  },
-  {
-    "title": "Comprendre Avant d’Agir : La Clé des Esprits Éveillés",
-    "category": "Réflexion",
-    "date": "1 avril 2026",
-    "icon": "🧠",
-    "description": "Apprenez pourquoi comprendre avant d’agir est la clé d’une vie plus lucide, plus calme et plus puissante.",
-    "url": "/articles/comprendre-avant-dagir.html"
-  },
-  {
-    "title": "Économie de l'attention : Le hold-up invisible sur votre cerveau",
-    "category": "Technologie & Société",
-    "date": "25 mars 2026",
-    "icon": "👁️",
-    "description": "Votre attention est la ressource la plus précieuse au monde. Découvrez comment les géants de la tech la piratent et comment reprendre le contrôle.",
-    "url": "/articles/economie-de-l-attention-or-moderne.html"
   },
   {
     "title": "Écosophie Profonde : Au-delà de la survie, la symbiose",
@@ -128,14 +112,6 @@
     "url": "/articles/ethique-de-influence-vs-manipulation.html"
   },
   {
-    "title": "La fatigue mentale à l’ère numérique",
-    "category": "Article",
-    "date": "",
-    "icon": "📝",
-    "description": "",
-    "url": "/articles/fatigue-mentale-ere-numerique.html"
-  },
-  {
     "title": "Ikigai : Votre boussole pour une vie pleine de sens",
     "category": "Spiritualité & Sens",
     "date": "25 mars 2026",
@@ -176,43 +152,59 @@
     "url": "/articles/le-nerf-vague-cle-du-calme.html"
   },
   {
-    "title": "Le piège de la vie automatique",
-    "category": "Réflexion",
-    "date": "1 avril 2026",
-    "icon": "🧠",
-    "description": "Et si tu vivais en pilote automatique sans t'en rendre compte ? Découvre comment reprendre le contrôle de ta vie et penser autrement.",
-    "url": "/articles/le-piege-de-la-vie-automatique.html"
-  },
-  {
-    "title": "Le syndrome de l'imposteur : Pourquoi c'est une excellente nouvelle",
-    "category": "Mindset & Psychologie",
-    "date": "1 avril 2026",
-    "icon": "🎭",
-    "description": "Et si votre sentiment d'illégitimité était en réalité votre plus grand atout ? Apprenez à transformer le syndrome de l'imposteur en moteur.",
-    "url": "/articles/le-syndrome-de-l-imposteur-un-allie.html"
-  },
-  {
-    "title": "Le transhumanisme : L'humain est-il devenu obsolète ?",
-    "category": "Réflexion & Technologie",
-    "date": "28 mars 2026",
-    "icon": "🦾",
-    "description": "Puces cérébrales, immortalité, augmentation biologique : le transhumanisme redéfinit l'humain. Jusqu'où pouvons-nous aller sans nous perdre ?",
-    "url": "/articles/le-transhumanisme-et-essence-humaine.html"
-  },
-  {
-    "title": "Méta-Apprentissage : La compétence ultime du XXIe siècle",
-    "category": "Éducation & Performance",
-    "date": "15 mars 2026",
-    "icon": "🚀",
-    "description": "Découvrez le méta-apprentissage : l'art d'apprendre à apprendre pour doubler votre vitesse d'acquisition de compétences.",
-    "url": "/articles/meta-apprentissage-apprendre-a-apprendre.html"
-  },
-  {
     "title": "5 conseils pour mieux gérer le temps",
     "category": "Développement personnel",
     "date": "30 mars 2026",
     "icon": "📝",
     "description": "Découvrez 5 conseils pratiques pour mieux gérer votre temps, gagner en productivité et réduire le stress au quotidien.",
     "url": "/articles/5-conseils-pour-mieux-gerer-le-temps.html"
+  },
+  {
+    "title": "Amor Fati : L'art de transformer le pire en meilleur",
+    "category": "Philosophie",
+    "date": "12 mars 2026",
+    "icon": "🔥",
+    "description": "Découvrez l'Amor Fati, le concept philosophique pour cesser de subir la vie et transformer chaque obstacle en opportunité.",
+    "url": "/articles/amor-fati-aimer-le-destin.html"
+  },
+  {
+    "title": "Antifragilité : Pourquoi vous avez besoin du chaos",
+    "category": "Business & Stratégie",
+    "date": "10 mars 2026",
+    "icon": "💎",
+    "description": "Découvrez le concept d'antifragilité : comment ne plus seulement résister aux chocs, mais s'en servir pour devenir plus fort.",
+    "url": "/articles/antifragilite-procurer-par-le-desordre.html"
+  },
+  {
+    "title": "Biomimétisme : La nature est la meilleure ingénieure du monde",
+    "category": "Science & Environnement",
+    "date": "20 mars 2026",
+    "icon": "🍃",
+    "description": "Découvrez le biomimétisme : comment la nature inspire les technologies de demain, du TGV au dessalement de l'eau.",
+    "url": "/articles/biomimetisme-ingenierie-de-la-nature.html"
+  },
+  {
+    "title": "Chronos vs Kairos : Maîtriser le temps, pas seulement l'horloge",
+    "category": "Philosophie & Vie",
+    "date": "20 fevrier 2026",
+    "icon": "⏳",
+    "description": "Découvrez la différence entre Chronos et Kairos. Apprenez à ne plus seulement gérer vos minutes, mais à saisir les opportunités de la vie.",
+    "url": "/articles/chronos-vs-kairos-maitriser-le-temps.html"
+  },
+  {
+    "title": "Comprendre Avant d’Agir : La Clé des Esprits Éveillés",
+    "category": "Réflexion",
+    "date": "1 avril 2026",
+    "icon": "🧠",
+    "description": "Apprenez pourquoi comprendre avant d’agir est la clé d’une vie plus lucide, plus calme et plus puissante.",
+    "url": "/articles/comprendre-avant-dagir.html"
+  },
+  {
+    "title": "Économie de l'attention : Le hold-up invisible sur votre cerveau",
+    "category": "Technologie & Société",
+    "date": "25 mars 2026",
+    "icon": "👁️",
+    "description": "Votre attention est la ressource la plus précieuse au monde. Découvrez comment les géants de la tech la piratent et comment reprendre le contrôle.",
+    "url": "/articles/economie-de-l-attention-or-moderne.html"
   }
 ]
