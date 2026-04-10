@@ -1,5 +1,53 @@
 [
   {
+    "title": "Le nerf vague : La clé biologique du calme instantané",
+    "category": "Santé Mentale",
+    "date": "12 mars 2026",
+    "icon": "🧘",
+    "description": "Découvrez le nerf vague, le bouton reset de votre système nerveux. Apprenez des techniques simples pour éteindre l'anxiété instantanément.",
+    "url": "/articles/le-nerf-vague-cle-du-calme.html"
+  },
+  {
+    "title": "Le piège de la vie automatique",
+    "category": "Réflexion",
+    "date": "1 avril 2026",
+    "icon": "🧠",
+    "description": "Et si tu vivais en pilote automatique sans t'en rendre compte ? Découvre comment reprendre le contrôle de ta vie et penser autrement.",
+    "url": "/articles/le-piege-de-la-vie-automatique.html"
+  },
+  {
+    "title": "Le syndrome de l'imposteur : Pourquoi c'est une excellente nouvelle",
+    "category": "Mindset & Psychologie",
+    "date": "1 avril 2026",
+    "icon": "🎭",
+    "description": "Et si votre sentiment d'illégitimité était en réalité votre plus grand atout ? Apprenez à transformer le syndrome de l'imposteur en moteur.",
+    "url": "/articles/le-syndrome-de-l-imposteur-un-allie.html"
+  },
+  {
+    "title": "Le transhumanisme : L'humain est-il devenu obsolète ?",
+    "category": "Réflexion & Technologie",
+    "date": "28 mars 2026",
+    "icon": "🦾",
+    "description": "Puces cérébrales, immortalité, augmentation biologique : le transhumanisme redéfinit l'humain. Jusqu'où pouvons-nous aller sans nous perdre ?",
+    "url": "/articles/le-transhumanisme-et-essence-humaine.html"
+  },
+  {
+    "title": "Méta-Apprentissage : La compétence ultime du XXIe siècle",
+    "category": "Éducation & Performance",
+    "date": "15 mars 2026",
+    "icon": "🚀",
+    "description": "Découvrez le méta-apprentissage : l'art d'apprendre à apprendre pour doubler votre vitesse d'acquisition de compétences.",
+    "url": "/articles/meta-apprentissage-apprendre-a-apprendre.html"
+  },
+  {
+    "title": "Neuroplasticité Dirigée : Devenez l'architecte de votre cerveau",
+    "category": "Santé & Mindset",
+    "date": "18 mars 2026",
+    "icon": "🧠",
+    "description": "Apprenez à hacker votre cerveau grâce à la neuroplasticité dirigée. Redessinez vos habitudes et vos capacités cognitives.",
+    "url": "/articles/neuroplasticite-dirigee.html"
+  },
+  {
     "title": "L'Ombre et le Leadership : Intégrer sa part obscure pour doubler sa puissance",
     "category": "Psychologie",
     "date": "24 février 2026",
@@ -14,6 +62,14 @@
     "icon": "✨",
     "description": "Réapprendre à briller sans s'épuiser : un article inspirant sur la lumière intérieure et la croissance personnelle.",
     "url": "/articles/reapprendre-a-briller.html"
+  },
+  {
+    "title": "7 choses que tu dois éviter pour devenir spirituellement puissant",
+    "category": "Article",
+    "date": "",
+    "icon": "📝",
+    "description": "",
+    "url": "/articles/7-choses-a-eviter-pour-devenir-spirituellement-puissant.html"
   },
   {
     "title": "Amor Fati : L'art de transformer le pire en meilleur",
@@ -158,54 +214,6 @@
     "icon": "🎯",
     "description": "Faire plusieurs choses à la fois ne vous rend pas plus productif, cela détruit votre concentration. Découvrez comment retrouver l'hyperfocus.",
     "url": "/articles/le-mythe-du-multitasking.html"
-  },
-  {
-    "title": "Le nerf vague : La clé biologique du calme instantané",
-    "category": "Santé Mentale",
-    "date": "12 mars 2026",
-    "icon": "🧘",
-    "description": "Découvrez le nerf vague, le bouton reset de votre système nerveux. Apprenez des techniques simples pour éteindre l'anxiété instantanément.",
-    "url": "/articles/le-nerf-vague-cle-du-calme.html"
-  },
-  {
-    "title": "Le piège de la vie automatique",
-    "category": "Réflexion",
-    "date": "1 avril 2026",
-    "icon": "🧠",
-    "description": "Et si tu vivais en pilote automatique sans t'en rendre compte ? Découvre comment reprendre le contrôle de ta vie et penser autrement.",
-    "url": "/articles/le-piege-de-la-vie-automatique.html"
-  },
-  {
-    "title": "Le syndrome de l'imposteur : Pourquoi c'est une excellente nouvelle",
-    "category": "Mindset & Psychologie",
-    "date": "1 avril 2026",
-    "icon": "🎭",
-    "description": "Et si votre sentiment d'illégitimité était en réalité votre plus grand atout ? Apprenez à transformer le syndrome de l'imposteur en moteur.",
-    "url": "/articles/le-syndrome-de-l-imposteur-un-allie.html"
-  },
-  {
-    "title": "Le transhumanisme : L'humain est-il devenu obsolète ?",
-    "category": "Réflexion & Technologie",
-    "date": "28 mars 2026",
-    "icon": "🦾",
-    "description": "Puces cérébrales, immortalité, augmentation biologique : le transhumanisme redéfinit l'humain. Jusqu'où pouvons-nous aller sans nous perdre ?",
-    "url": "/articles/le-transhumanisme-et-essence-humaine.html"
-  },
-  {
-    "title": "Méta-Apprentissage : La compétence ultime du XXIe siècle",
-    "category": "Éducation & Performance",
-    "date": "15 mars 2026",
-    "icon": "🚀",
-    "description": "Découvrez le méta-apprentissage : l'art d'apprendre à apprendre pour doubler votre vitesse d'acquisition de compétences.",
-    "url": "/articles/meta-apprentissage-apprendre-a-apprendre.html"
-  },
-  {
-    "title": "Neuroplasticité Dirigée : Devenez l'architecte de votre cerveau",
-    "category": "Santé & Mindset",
-    "date": "18 mars 2026",
-    "icon": "🧠",
-    "description": "Apprenez à hacker votre cerveau grâce à la neuroplasticité dirigée. Redessinez vos habitudes et vos capacités cognitives.",
-    "url": "/articles/neuroplasticite-dirigee.html"
   },
   {
     "title": "5 conseils pour mieux gérer le temps",
